@@ -1,12 +1,10 @@
 import { ButtonComponent, DropdownComponent } from '@ng-nx-sandbox/sandbox-ui';
-
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ProductService } from '../../services/product.service';
 
 import { ProductModel } from '../../shared/models';
-
 
 @Component({
   selector: 'ng-nx-sandbox-products',
