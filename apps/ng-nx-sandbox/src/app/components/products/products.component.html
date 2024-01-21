@@ -1,0 +1,19 @@
+<ng-nx-sandbox-button [theme]="'primary'"
+                      [label]="'Create Products'"
+                      [size]="'sm'"
+                      (click)="createProduct()">
+</ng-nx-sandbox-button>
+
+<ng-nx-sandbox-button [theme]="'secondary'"
+                      [label]="'Get Products'"
+                      [size]="'md'"
+                      (click)="getProducts()">
+</ng-nx-sandbox-button>
+
+
+@if (!isLoading) {
+<ng-nx-sandbox-dropdown [items]="products"
+                        [optionLabel]="'department'"
+                        [optionValue]="'department'">
+</ng-nx-sandbox-dropdown>
+}

@@ -1,0 +1,14 @@
+<div class="dropdown">
+    <div tabindex="0"
+         role="button"
+         class="btn m-1">
+        {{btnLabel}}
+    </div>
+
+    <ul tabindex="0"
+        class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+        @for (item of items; let index = $index; track index) {
+        <li><a>{{item}}</a></li>
+        }
+    </ul>
+</div>

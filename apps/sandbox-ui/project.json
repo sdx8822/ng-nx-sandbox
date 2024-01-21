@@ -1,0 +1,83 @@
+{
+  "name": "sandbox-ui",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/sandbox-ui/src",
+  "prefix": "ng-nx-sandbox",
+  "tags": ["ui"],
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/sandbox-ui/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "apps/sandbox-ui/.storybook",
+        "browserTarget": "sandbox-ui:build-storybook",
+        "styles": ["apps/ng-nx-sandbox/src/styles.scss"],
+        "compodoc": true,
+        "compodocArgs": [
+          "-e",
+          "json",
+          "-d",
+          "apps/sandbox-ui"
+        ]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/sandbox-ui",
+        "configDir": "apps/sandbox-ui/.storybook",
+        "browserTarget": "sandbox-ui:build-storybook",
+        "styles": ["apps/ng-nx-sandbox/src/styles.scss"],
+        "compodoc": true,
+        "compodocArgs": [
+          "-e",
+          "json",
+          "-d",
+          "apps/sandbox-ui"
+        ]
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c apps/sandbox-ui/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "sandbox-ui:build-storybook",
+        "styles": ["apps/ng-nx-sandbox/src/styles.scss"],
+        "staticFilePath": "dist/storybook/sandbox-ui"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "sandbox-ui:build-storybook:ci"
+        }
+      }
+    }
+  }
+}

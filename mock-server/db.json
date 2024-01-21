@@ -1,0 +1,165 @@
+{
+  "products": [
+    {
+      "department": "Shoes",
+      "isbn": "978-0-230-97743-3",
+      "price": "$615.00",
+      "product": "Tuna",
+      "productAdjective": "Elegant",
+      "productDescription": "The Football Is Good For Training And Recreational Purposes",
+      "productMaterial": "Cotton",
+      "productName": "Modern Plastic Chicken",
+      "productImage": "https://loremflickr.com/640/480/Tuna?lock=2024627566018560",
+      "id": 4
+    },
+    {
+      "department": "Baby",
+      "isbn": "978-0-7027-3286-7",
+      "price": "$900.00",
+      "product": "Pants",
+      "productAdjective": "Generic",
+      "productDescription": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+      "productMaterial": "Concrete",
+      "productName": "Handcrafted Steel Fish",
+      "productImage": "https://loremflickr.com/640/480/Pants?lock=8842259434831872",
+      "id": 5
+    },
+    {
+      "department": "Books",
+      "isbn": "978-1-4003-1933-6",
+      "price": "$589.00",
+      "product": "Ball",
+      "productAdjective": "Small",
+      "productDescription": "The Football Is Good For Training And Recreational Purposes",
+      "productMaterial": "Steel",
+      "productName": "Oriental Concrete Computer",
+      "productImage": "https://loremflickr.com/640/480/Ball?lock=362591908003840",
+      "id": 6
+    },
+    {
+      "department": "Baby",
+      "isbn": "978-0-85297-961-7",
+      "price": "$903.00",
+      "product": "Hat",
+      "productAdjective": "Incredible",
+      "productDescription": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+      "productMaterial": "Plastic",
+      "productName": "Ergonomic Plastic Shirt",
+      "productImage": "https://loremflickr.com/640/480/Hat?lock=2790902235922432",
+      "id": 7
+    },
+    {
+      "department": "Tools",
+      "isbn": "978-0-367-04559-3",
+      "price": "$513.00",
+      "product": "Pants",
+      "productAdjective": "Incredible",
+      "productDescription": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "productMaterial": "Granite",
+      "productName": "Luxurious Fresh Shoes",
+      "productImage": "https://loremflickr.com/640/480/Pants?lock=4397504969834496",
+      "id": 8
+    },
+    {
+      "department": "Tools",
+      "isbn": "978-1-358-07074-7",
+      "price": "$679.00",
+      "product": "Cheese",
+      "productAdjective": "Recycled",
+      "productDescription": "The Football Is Good For Training And Recreational Purposes",
+      "productMaterial": "Concrete",
+      "productName": "Intelligent Granite Gloves",
+      "productImage": "https://loremflickr.com/640/480/Cheese?lock=5109094511804416",
+      "id": 9
+    },
+    {
+      "department": "Grocery",
+      "isbn": "978-1-5084-0764-5",
+      "price": "$961.00",
+      "product": "Sausages",
+      "productAdjective": "Gorgeous",
+      "productDescription": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "productMaterial": "Plastic",
+      "productName": "Handcrafted Plastic Cheese",
+      "productImage": "https://loremflickr.com/640/480/Grocery?lock=3530169927073792",
+      "id": 10
+    },
+    {
+      "variables": {},
+      "query": "{\n  products {\n    department\n    price\n    product\n    productName\n    __typename\n  }\n}",
+      "id": 11
+    },
+    {
+      "department": "Kids",
+      "isbn": "978-1-246-83004-0",
+      "price": "$343.00",
+      "product": "Sausages",
+      "productAdjective": "Awesome",
+      "productDescription": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+      "productMaterial": "Frozen",
+      "productName": "Electronic Granite Pizza",
+      "productImage": "https://loremflickr.com/640/480/Sausages?lock=7452913616027648",
+      "id": 12
+    },
+    {
+      "department": "Home",
+      "isbn": "978-0-469-89345-0",
+      "price": "$177.00",
+      "product": "Salad",
+      "productAdjective": "Unbranded",
+      "productDescription": "The Football Is Good For Training And Recreational Purposes",
+      "productMaterial": "Steel",
+      "productName": "Rustic Steel Pizza",
+      "productImage": "https://loremflickr.com/640/480/Salad?lock=370843163033600",
+      "id": 13
+    },
+    {
+      "department": "Games",
+      "isbn": "978-0-391-55789-5",
+      "price": "$249.00",
+      "product": "Gloves",
+      "productAdjective": "Oriental",
+      "productDescription": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "productMaterial": "Bronze",
+      "productName": "Gorgeous Metal Chair",
+      "productImage": "https://loremflickr.com/640/480/Gloves?lock=8664132872044544",
+      "id": 14
+    },
+    {
+      "department": "Sports",
+      "isbn": "978-1-224-75139-8",
+      "price": "$701.00",
+      "product": "Bike",
+      "productAdjective": "Recycled",
+      "productDescription": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "productMaterial": "Rubber",
+      "productName": "Modern Metal Bike",
+      "productImage": "https://loremflickr.com/640/480/Bike?lock=1704309062369280",
+      "id": 15
+    },
+    {
+      "department": "Baby",
+      "isbn": "978-1-6620-9115-5",
+      "price": "$566.00",
+      "product": "Keyboard",
+      "productAdjective": "Elegant",
+      "productDescription": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
+      "productMaterial": "Wooden",
+      "productName": "Unbranded Granite Car",
+      "productImage": "https://loremflickr.com/640/480/Keyboard?lock=1818500693753856",
+      "id": 16
+    },
+    {
+      "department": "Tools",
+      "isbn": "978-0-12-624130-3",
+      "price": "$666.00",
+      "product": "Cheese",
+      "productAdjective": "Handmade",
+      "productDescription": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+      "productMaterial": "Plastic",
+      "productName": "Refined Concrete Shirt",
+      "productImage": "https://loremflickr.com/640/480/Cheese?lock=7147757917700096",
+      "id": 17
+    }
+  ]
+}

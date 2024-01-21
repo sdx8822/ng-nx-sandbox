@@ -1,0 +1,845 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-d41bd0c1e018b66f343e1ebbeb1b66c553cb697e663d7781d3ca13dcab6d9f6e82c4dd787102c541d169cc2ad61d26cbae2da34de653647de1ea336e2d8aff81",
+            "file": "apps/sandbox-ui/src/lib/button/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ng-nx-sandbox-button",
+            "styleUrls": [
+                "./button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./button.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "isDisabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIs the button disabled?\n",
+                    "description": "<p>Is the button disabled?</p>\n",
+                    "line": 31,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 1296,
+                            "end": 1309,
+                            "flags": 16842752,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 334,
+                            "tagName": {
+                                "pos": 1297,
+                                "end": 1305,
+                                "flags": 16842752,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 80,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nButton contents\n\n",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 65,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'xs'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nHow large should the button be?\n",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 50,
+                    "type": "\"xs\" | \"sm\" | \"md\" | \"lg\"",
+                    "decorators": []
+                },
+                {
+                    "name": "state",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat is the state of the button? The state overrides the base theme.\n",
+                    "description": "<p>What is the state of the button? The state overrides the base theme.</p>\n",
+                    "line": 37,
+                    "type": "\"info\" | \"success\" | \"error\" | \"warning\"",
+                    "decorators": []
+                },
+                {
+                    "name": "theme",
+                    "defaultValue": "'secondary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat is the importance or purpose of this call to action?\n",
+                    "description": "<p>What is the importance or purpose of this call to action?</p>\n",
+                    "line": 16,
+                    "type": "\"primary\" | \"secondary\" | \"accent\" | \"neutral\" | \"ghost\" | \"link\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 72,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "_sizeMap",
+                    "defaultValue": "{\n    xs: 'btn-xs',\n    sm: 'btn-sm',\n    md: 'btn-md',\n    lg: 'btn-lg'\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "optional": false,
+                    "description": "",
+                    "line": 52,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "_stateMap",
+                    "defaultValue": "{\n    info: 'btn-info',\n    success: 'btn-success',\n    error: 'btn-error',\n    warning: 'btn-warning'\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "optional": false,
+                    "description": "",
+                    "line": 39,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "_themeMap",
+                    "defaultValue": "{\n    primary: 'btn-primary',\n    secondary: 'btn-secondary',\n    accent: 'btn-accent',\n    neutral: 'btn-neutral',\n    ghost: 'btn-ghost',\n    link: 'btn-link'\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "optional": false,
+                    "description": "",
+                    "line": 18,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'ng-nx-sandbox-button',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n})\nexport class ButtonComponent {\n  /**\n   * What is the importance or purpose of this call to action?\n   */\n  @Input()\n  theme: 'primary' | 'secondary' | 'accent' | 'neutral' | 'ghost' | 'link' = 'secondary';\n\n  private _themeMap = {\n    primary: 'btn-primary',\n    secondary: 'btn-secondary',\n    accent: 'btn-accent',\n    neutral: 'btn-neutral',\n    ghost: 'btn-ghost',\n    link: 'btn-link'\n  }\n\n  /**\n   * Is the button disabled?\n   */\n  @Input()\n  isDisabled = false;\n\n  /**\n   * What is the state of the button? The state overrides the base theme.\n   */\n  @Input()\n  state?: 'info' | 'success' | 'error' | 'warning';\n\n  private _stateMap = {\n    info: 'btn-info',\n    success: 'btn-success',\n    error: 'btn-error',\n    warning: 'btn-warning'\n  };\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'xs' | 'sm' | 'md' | 'lg' = 'xs';\n\n  private _sizeMap = {\n    xs: 'btn-xs',\n    sm: 'btn-sm',\n    md: 'btn-md',\n    lg: 'btn-lg'\n  };\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  // eslint-disable-next-line @angular-eslint/no-output-on-prefix\n  onClick = new EventEmitter<Event>();\n\n  // Do not create dynamic classes or they won't render\n  public get classes(): string[] {\n    let classList = [\n      'btn',\n      this._sizeMap[this.size],\n      this._themeMap[this.theme],\n    ];\n\n    if (this.isDisabled) {\n      classList = [...classList, 'btn-disabled'];\n    }\n\n    if (this.state) {\n      classList = [...classList, this._stateMap[this.state]];\n    }\n\n    return classList;\n  }\n}",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 75
+                    }
+                }
+            },
+            "templateData": "<button [ngClass]=\"classes\"\n        (click)=\"onClick.emit($event)\">\n  {{ label }}\n</button>"
+        },
+        {
+            "name": "DropdownComponent",
+            "id": "component-DropdownComponent-085b3ff35d553b6a0a10b27bf8c54c9e9dbb3498b474b30236665453f7eaa8f3a1564d526e3a36b2686ac1a28b3e91da7d7467e4286a4fec640a9192b0cb0b2e",
+            "file": "apps/sandbox-ui/src/lib/dropdown/dropdown.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ng-nx-sandbox-dropdown",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./dropdown.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "btnLabel",
+                    "defaultValue": "'Dropdown'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat should we label the button dropdown?\n",
+                    "description": "<p>What should we label the button dropdown?</p>\n",
+                    "line": 19,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "items",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 594,
+                            "end": 607,
+                            "flags": 16842752,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 334,
+                            "tagName": {
+                                "pos": 595,
+                                "end": 603,
+                                "flags": 16842752,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 80,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nWhat options should the dropdown consist of?\n\n",
+                    "description": "<p>What options should the dropdown consist of?</p>\n",
+                    "line": 27,
+                    "type": "string[] | object[] | number[]",
+                    "decorators": []
+                },
+                {
+                    "name": "optionLabel",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIf items are not primitive types, how should we display the labels?\n",
+                    "description": "<p>If items are not primitive types, how should we display the labels?</p>\n",
+                    "line": 33,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "optionValue",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIf items are not primitive types, how should we save the values?\n",
+                    "description": "<p>If items are not primitive types, how should we save the values?</p>\n",
+                    "line": 39,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 46,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "_checkItemsType",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "string",
+                    "typeParameters": [],
+                    "line": 56,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "_createLabels",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 60,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 48,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { SortingService } from '@ng-nx-sandbox/shared/services';\n\n@Component({\n  selector: 'ng-nx-sandbox-dropdown',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './dropdown.component.html',\n  styleUrl: './dropdown.component.scss',\n})\nexport class DropdownComponent implements OnInit {\n\n  /**\n   * What should we label the button dropdown?\n   */\n  @Input()\n  btnLabel = 'Dropdown'\n\n  /**\n   * What options should the dropdown consist of?\n   *\n   * @required\n   */\n  @Input()\n  items: string[] | object[] | number[] = [];\n\n  /**\n   * If items are not primitive types, how should we display the labels?\n   */\n  @Input()\n  optionLabel?: string;\n\n  /**\n   * If items are not primitive types, how should we save the values?\n   */\n  @Input()\n  optionValue?: string;\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  // eslint-disable-next-line @angular-eslint/no-output-on-prefix\n  onClick = new EventEmitter<Event>();\n\n  ngOnInit(): void {\n      this._checkItemsType();\n\n      if (this._checkItemsType() === 'object') {\n        this._createLabels();\n      }\n  }\n\n  private _checkItemsType(): string {\n    return typeof this.items;\n  }\n\n  private _createLabels(): void {\n    let newItemsList: never[] = [];\n\n    this.items.forEach((item) => {\n      if (this.optionLabel) {\n        newItemsList = <never>[...newItemsList, item[<never>this.optionLabel]];\n      }\n    });\n\n    this.items = [...newItemsList];\n    this.items = SortingService.sortStringArray(<never>this.items);\n  }\n}\n",
+            "styleUrl": "./dropdown.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"dropdown\">\n    <div tabindex=\"0\"\n         role=\"button\"\n         class=\"btn m-1\">\n        {{btnLabel}}\n    </div>\n\n    <ul tabindex=\"0\"\n        class=\"dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52\">\n        @for (item of items; let index = $index; track index) {\n        <li><a>{{item}}</a></li>\n        }\n    </ul>\n</div>"
+        },
+        {
+            "name": "ToggleComponent",
+            "id": "component-ToggleComponent-e525d2d6e75947a5c47128fdd50ee05ee5032bdfc74e7248fce1c4f8cfc1535c44db8660878ae180df07688944ac6740d7bccf3025596e078a9852f150709ee3",
+            "file": "apps/sandbox-ui/src/lib/toggle/toggle.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ng-nx-sandbox-toggle",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./toggle.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "labels",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string[]",
+                    "decorators": []
+                },
+                {
+                    "name": "nullablbe",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "boolean",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'ng-nx-sandbox-toggle',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './toggle.component.html',\n  styleUrl: './toggle.component.scss',\n})\nexport class ToggleComponent {\n\n  @Input() labels: string[] = [];\n  @Input() nullablbe = true;\n}\n",
+            "styleUrl": "./toggle.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<section class=\"toggle-container\">\n    \n</section>"
+        }
+    ],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "config",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/sandbox-ui/.storybook/main.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StorybookConfig",
+                "defaultValue": "{\n  stories: ['../**/*.stories.@(js|jsx|ts|tsx|mdx)'],\n  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],\n  framework: {\n    name: '@storybook/angular',\n    options: {},\n  },\n  docs: {\n    autodocs: true,\n    defaultName: 'Documentation'\n  }\n}"
+            },
+            {
+                "name": "Heading",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    theme: 'secondary',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Button',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/button works!/gi)).toBeTruthy();\n  },\n}"
+            },
+            {
+                "name": "Heading",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/dropdown/dropdown.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    btnLabel: 'Dropdown',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/dropdown works!/gi)).toBeTruthy();\n  },\n}"
+            },
+            {
+                "name": "Heading",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    labels: [],\n    nullablbe: true,\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/toggle works!/gi)).toBeTruthy();\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ButtonComponent>",
+                "defaultValue": "{\n  component: ButtonComponent,\n  title: 'ButtonComponent',\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/dropdown/dropdown.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<DropdownComponent>",
+                "defaultValue": "{\n  component: DropdownComponent,\n  title: 'DropdownComponent',\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ToggleComponent>",
+                "defaultValue": "{\n  component: ToggleComponent,\n  title: 'ToggleComponent',\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    theme: 'secondary',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Button',\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/dropdown/dropdown.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    btnLabel: 'Dropdown',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    labels: [],\n    nullablbe: true,\n  },\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ButtonComponent>",
+                "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<DropdownComponent>",
+                "file": "apps/sandbox-ui/src/lib/dropdown/dropdown.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ToggleComponent>",
+                "file": "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "apps/sandbox-ui/.storybook/main.ts": [
+                {
+                    "name": "config",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/.storybook/main.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StorybookConfig",
+                    "defaultValue": "{\n  stories: ['../**/*.stories.@(js|jsx|ts|tsx|mdx)'],\n  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],\n  framework: {\n    name: '@storybook/angular',\n    options: {},\n  },\n  docs: {\n    autodocs: true,\n    defaultName: 'Documentation'\n  }\n}"
+                }
+            ],
+            "apps/sandbox-ui/src/lib/button/button.component.stories.ts": [
+                {
+                    "name": "Heading",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    theme: 'secondary',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Button',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/button works!/gi)).toBeTruthy();\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ButtonComponent>",
+                    "defaultValue": "{\n  component: ButtonComponent,\n  title: 'ButtonComponent',\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    theme: 'secondary',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Button',\n  },\n}"
+                }
+            ],
+            "apps/sandbox-ui/src/lib/dropdown/dropdown.component.stories.ts": [
+                {
+                    "name": "Heading",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/dropdown/dropdown.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    btnLabel: 'Dropdown',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/dropdown works!/gi)).toBeTruthy();\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/dropdown/dropdown.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<DropdownComponent>",
+                    "defaultValue": "{\n  component: DropdownComponent,\n  title: 'DropdownComponent',\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/dropdown/dropdown.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    btnLabel: 'Dropdown',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n}"
+                }
+            ],
+            "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts": [
+                {
+                    "name": "Heading",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    labels: [],\n    nullablbe: true,\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/toggle works!/gi)).toBeTruthy();\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ToggleComponent>",
+                    "defaultValue": "{\n  component: ToggleComponent,\n  title: 'ToggleComponent',\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    labels: [],\n    nullablbe: true,\n  },\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "apps/sandbox-ui/src/lib/button/button.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ButtonComponent>",
+                    "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "apps/sandbox-ui/src/lib/dropdown/dropdown.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<DropdownComponent>",
+                    "file": "apps/sandbox-ui/src/lib/dropdown/dropdown.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ToggleComponent>",
+                    "file": "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ]
+        }
+    },
+    "routes": [],
+    "coverage": {
+        "count": 8,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "apps/sandbox-ui/.storybook/main.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "config",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Heading",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/button/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 60,
+                "coverageCount": "6/10",
+                "status": "good"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/dropdown/dropdown.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Heading",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/dropdown/dropdown.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/dropdown/dropdown.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/dropdown/dropdown.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DropdownComponent",
+                "coveragePercent": 55,
+                "coverageCount": "5/9",
+                "status": "good"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Heading",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/toggle/toggle.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ToggleComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            }
+        ]
+    }
+}

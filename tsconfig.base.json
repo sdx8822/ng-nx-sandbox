@@ -6,6 +6,7 @@
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es2015",
@@ -14,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@ng-nx-sandbox/shared/services": ["apps/ng-nx-sandbox/src/app/shared/services"],
+      "@ng-nx-sandbox/sandbox-ui": ["apps/sandbox-ui/src/index.ts"],
+      "apollo-angular": ["node_modules/apollo-angular"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
