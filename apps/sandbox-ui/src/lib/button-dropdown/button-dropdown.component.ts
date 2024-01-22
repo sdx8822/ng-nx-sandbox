@@ -4,13 +4,13 @@ import { CommonModule } from '@angular/common';
 import { SortingService } from '@ng-nx-sandbox/shared-services';
 
 @Component({
-  selector: 'ng-nx-sandbox-dropdown',
+  selector: 'ng-nx-sandbox-button-dropdown',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './dropdown.component.html',
-  styleUrl: './dropdown.component.scss',
+  templateUrl: './button-dropdown.component.html',
+  styleUrl: './button-dropdown.component.scss',
 })
-export class DropdownComponent implements OnInit {
+export class ButtonDropdownComponent implements OnInit {
 
   /**
    * What should we label the button dropdown?

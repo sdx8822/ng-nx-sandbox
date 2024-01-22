@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "nx serve ng-nx-sandbox",
-    "storybook:run": "nx run sandbox-ui:storybook",
+    "dev": "nx serve ng-nx-sandbox --host=0.0.0.0",
+    "storybook:run": "nx run sandbox-ui:storybook --host=0.0.0.0",
     "storybook:stories": "nx g @nx/angular:stories --project=sandbox-ui",
-    "mock:api": "node mock-server/server",
-    "mock:graphql": "node mock-server/serverGQL",
-    "mock:graphql-server": "json-graphql-server mock-server/db.json --p 4500"
+    "mock:api": "node apps/mock-server/server",
+    "mock:graphql-server": "json-graphql-server apps/mock-server/db.json --p 4500 --host=0.0.0.0",
+    "dep-graph": "nx dep-graph"
   },
   "private": true,
   "dependencies": {

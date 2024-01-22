@@ -16,9 +16,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ng-nx-sandbox/shared/services": ["apps/ng-nx-sandbox/src/app/shared/services"],
-      "@ng-nx-sandbox/shared-services": ["apps/shared-services/src/public-api.ts"],
       "@ng-nx-sandbox/sandbox-ui": ["apps/sandbox-ui/src/index.ts"],
+      "@ng-nx-sandbox/shared-services": [
+        "apps/shared-services/src/public-api.ts"
+      ],
       "apollo-angular": ["node_modules/apollo-angular"]
     }
   },

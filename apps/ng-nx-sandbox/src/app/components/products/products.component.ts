@@ -1,4 +1,4 @@
-import { ButtonComponent, DropdownComponent } from '@ng-nx-sandbox/sandbox-ui';
+import { ButtonComponent, ButtonDropdownComponent } from '@ng-nx-sandbox/sandbox-ui';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,7 +9,7 @@ import { ProductModel } from '../../shared/models';
 @Component({
   selector: 'ng-nx-sandbox-products',
   standalone: true,
-  imports: [CommonModule, ButtonComponent, DropdownComponent],
+  imports: [CommonModule, ButtonComponent, ButtonDropdownComponent],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
 })
