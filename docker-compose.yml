@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+  # Angular Application
+  ng-nx-sandbox:
+    extends:
+      file: docker-compose.base.yml
+      service: ng-nx-sandbox-base
+    command: npm run dev
+    ports:
+      - "4200:4200"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  # UI Library
+  sandbox-ui:
+    extends:
+      file: docker-compose.base.yml
+      service: ng-nx-sandbox-base
+    command: npm run storybook:run
+    ports:
+      - "4400:4400"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  rest-api:
+    extends:
+      file: docker-compose.base.yml
+      service: ng-nx-sandbox-base
+    command: npm run mock:api
+    ports:
+      - "3000:3000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  graphql-api:
+    extends:
+      file: docker-compose.base.yml
+      service: ng-nx-sandbox-base
+    command: npm run mock:graphql-server
+    ports:
+      - "4500:4500"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  mono-node-modules: null

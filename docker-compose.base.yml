@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  ng-nx-sandbox-base:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DEV_PLATFORM=DOCKER
+    volumes:
+      - ./:/apps
+      - mono-node-modules:/apps/node_modules

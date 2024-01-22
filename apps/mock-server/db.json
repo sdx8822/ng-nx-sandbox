@@ -160,6 +160,54 @@
       "productName": "Refined Concrete Shirt",
       "productImage": "https://loremflickr.com/640/480/Cheese?lock=7147757917700096",
       "id": 17
+    },
+    {
+      "department": "Clothing",
+      "isbn": "978-0-575-56142-7",
+      "price": "$771.00",
+      "product": "Bacon",
+      "productAdjective": "Elegant",
+      "productDescription": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "productMaterial": "Concrete",
+      "productName": "Electronic Fresh Towels",
+      "productImage": "https://loremflickr.com/640/480/Bacon?lock=6875538924765184",
+      "id": 18
+    },
+    {
+      "department": "Beauty",
+      "isbn": "978-1-362-62692-3",
+      "price": "$941.00",
+      "product": "Pants",
+      "productAdjective": "Practical",
+      "productDescription": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+      "productMaterial": "Fresh",
+      "productName": "Rustic Fresh Hat",
+      "productImage": "https://loremflickr.com/640/480/Pants?lock=7038231711318016",
+      "id": 19
+    },
+    {
+      "department": "Jewelery",
+      "isbn": "978-0-15-590423-1",
+      "price": "$311.00",
+      "product": "Chips",
+      "productAdjective": "Tasty",
+      "productDescription": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
+      "productMaterial": "Concrete",
+      "productName": "Handmade Concrete Chicken",
+      "productImage": "https://loremflickr.com/640/480/Chips?lock=1130154302636032",
+      "id": 20
+    },
+    {
+      "department": "Outdoors",
+      "isbn": "978-0-05-819787-7",
+      "price": "$899.00",
+      "product": "Shirt",
+      "productAdjective": "Generic",
+      "productDescription": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
+      "productMaterial": "Frozen",
+      "productName": "Recycled Frozen Chair",
+      "productImage": "https://loremflickr.com/640/480/Shirt?lock=6792037217075200",
+      "id": 21
     }
   ]
 }
