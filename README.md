@@ -1,3 +1,38 @@
+# Running the application using Docker
+
+- Download Docker for your local machine
+- Right click "docker-compose.yml" and "Compose Up"
+
+- View Angular application at port 4200
+- View the UI library and Storybook documentation page at port 4400
+
+
+# Running the application without Docker
+
+## Following package.json "scripts"
+
+Run the following commands at the project's root:
+
+### Angular Application
+```
+npm run dev
+```
+
+### UI Library and Storybook Documentation
+```
+npm run storybook:run
+```
+
+### Mock RESTful API server
+```
+npm run mock:api
+```
+
+### Mock GraphQL API server
+```
+npm run mock:graphql-server
+```
+
 # NgNxSandbox
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
