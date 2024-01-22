@@ -17,3 +17,12 @@
                         [optionValue]="'department'">
 </ng-nx-sandbox-button-dropdown>
 }
+
+@if (!isLoading) {
+<ng-nx-sandbox-select-dropdown [label]="'Please select an item'"
+                               [items]="products"
+                               [optionLabel]="'department'"
+                               [optionValue]="'department'"
+                               [theme]="'primary'">
+</ng-nx-sandbox-select-dropdown>
+}
