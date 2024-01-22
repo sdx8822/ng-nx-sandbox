@@ -7,7 +7,8 @@
     "storybook:run": "nx run sandbox-ui:storybook --host=0.0.0.0",
     "storybook:stories": "nx g @nx/angular:stories --project=sandbox-ui",
     "mock:api": "node apps/mock-server/server",
-    "mock:graphql-server": "json-graphql-server apps/mock-server/db.json --p 4500 --host=0.0.0.0",
+    "mock:graphql-api": "node apps/mock-server/graphql-server",
+    "mock:graphql-server": "json-graphql-server apps/mock-server/db.json --p 3300",
     "dep-graph": "nx dep-graph"
   },
   "private": true,

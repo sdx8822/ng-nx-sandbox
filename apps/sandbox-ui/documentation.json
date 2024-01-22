@@ -352,7 +352,7 @@
         },
         {
             "name": "SelectDropdownComponent",
-            "id": "component-SelectDropdownComponent-832ae0eedd0480ed183d452b8245b3f9d2de1eca09ddc5a278cab3ab355f645d4b8b644bec9d4df91c05a73583f0ac3d0afd7077988bfa52babe21b95d9e5a7e",
+            "id": "component-SelectDropdownComponent-4d74a1707183721d6fbccd4455d5d790af4b6e3c8adecb2ab7cb436c1e9445a717432d9a4dabdad3a817111899c3ba15e2c234ec0399899f71e20e9c0faa757c",
             "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -367,10 +367,224 @@
             ],
             "viewProviders": [],
             "hostDirectives": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
+            "inputsClass": [
+                {
+                    "name": "isDisabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIs the dropdown disabled?\n",
+                    "description": "<p>Is the dropdown disabled?</p>\n",
+                    "line": 45,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "items",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 1558,
+                            "end": 1571,
+                            "flags": 16842752,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 334,
+                            "tagName": {
+                                "pos": 1559,
+                                "end": 1567,
+                                "flags": 16842752,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 80,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nWhat options should the dropdown consist of?\n\n",
+                    "description": "<p>What options should the dropdown consist of?</p>\n",
+                    "line": 74,
+                    "type": "string[] | object[] | number[]",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Select an item'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 1436,
+                            "end": 1449,
+                            "flags": 16842752,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 334,
+                            "tagName": {
+                                "pos": 1437,
+                                "end": 1445,
+                                "flags": 16842752,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 80,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nButton contents\n\n",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 66,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "optionLabel",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIf items are not primitive types, how should we display the labels?\n",
+                    "description": "<p>If items are not primitive types, how should we display the labels?</p>\n",
+                    "line": 80,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "optionValue",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIf items are not primitive types, how should we save the values?\n",
+                    "description": "<p>If items are not primitive types, how should we save the values?</p>\n",
+                    "line": 86,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'xs'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nHow large should the dropdown be?\n",
+                    "description": "<p>How large should the dropdown be?</p>\n",
+                    "line": 51,
+                    "type": "\"xs\" | \"sm\" | \"md\" | \"lg\"",
+                    "decorators": []
+                },
+                {
+                    "name": "state",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat is the state of the dropdown? The state overrides the base theme.\n",
+                    "description": "<p>What is the state of the dropdown? The state overrides the base theme.</p>\n",
+                    "line": 32,
+                    "type": "\"info\" | \"success\" | \"error\" | \"warning\"",
+                    "decorators": []
+                },
+                {
+                    "name": "theme",
+                    "defaultValue": "'bordered'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat is the importance or purpose of this call to action?\n",
+                    "description": "<p>What is the importance or purpose of this call to action?</p>\n",
+                    "line": 18,
+                    "type": "\"primary\" | \"secondary\" | \"accent\" | \"bordered\" | \"ghost\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 93,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "_sizeMap",
+                    "defaultValue": "{\n    xs: 'select-xs',\n    sm: 'select-sm',\n    md: 'select-md',\n    lg: 'select-lg'\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "optional": false,
+                    "description": "",
+                    "line": 53,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "_stateMap",
+                    "defaultValue": "{\n    info: 'select-info',\n    success: 'select-success',\n    error: 'seelct-error',\n    warning: 'select-warning'\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "optional": false,
+                    "description": "",
+                    "line": 34,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "_themeMap",
+                    "defaultValue": "{\n    primary: 'select-primary',\n    secondary: 'select-secondary',\n    accent: 'select-accent',\n    bordered: 'select-bordered',\n    ghost: 'select-ghost'\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "optional": false,
+                    "description": "",
+                    "line": 20,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "_checkItemsType",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "string",
+                    "typeParameters": [],
+                    "line": 103,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "_createLabels",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 107,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 95,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -385,13 +599,27 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'ng-nx-sandbox-select-dropdown',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './select-dropdown.component.html',\n  styleUrl: './select-dropdown.component.scss',\n})\nexport class SelectDropdownComponent {}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { SortingService } from '@ng-nx-sandbox/shared-services';\n\n@Component({\n  selector: 'ng-nx-sandbox-select-dropdown',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './select-dropdown.component.html',\n  styleUrl: './select-dropdown.component.scss',\n})\nexport class SelectDropdownComponent implements OnInit {\n  /**\n   * What is the importance or purpose of this call to action?\n   */\n  @Input()\n  theme: 'primary' | 'secondary' | 'accent' | 'bordered' | 'ghost' = 'bordered';\n\n  private _themeMap = {\n    primary: 'select-primary',\n    secondary: 'select-secondary',\n    accent: 'select-accent',\n    bordered: 'select-bordered',\n    ghost: 'select-ghost'\n  }\n\n  /**\n   * What is the state of the dropdown? The state overrides the base theme.\n   */\n  @Input()\n  state?: 'info' | 'success' | 'error' | 'warning';\n\n  private _stateMap = {\n    info: 'select-info',\n    success: 'select-success',\n    error: 'seelct-error',\n    warning: 'select-warning'\n  };\n\n  /**\n   * Is the dropdown disabled?\n   */\n  @Input()\n  isDisabled = false;\n\n  /**\n   * How large should the dropdown be?\n   */\n  @Input()\n  size: 'xs' | 'sm' | 'md' | 'lg' = 'xs';\n\n  private _sizeMap = {\n    xs: 'select-xs',\n    sm: 'select-sm',\n    md: 'select-md',\n    lg: 'select-lg'\n  };\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Select an item';\n\n  /**\n   * What options should the dropdown consist of?\n   *\n   * @required\n   */\n  @Input()\n  items: string[] | object[] | number[] = [];\n\n  /**\n   * If items are not primitive types, how should we display the labels?\n   */\n  @Input()\n  optionLabel?: string;\n\n  /**\n   * If items are not primitive types, how should we save the values?\n   */\n  @Input()\n  optionValue?: string;\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  // eslint-disable-next-line @angular-eslint/no-output-on-prefix\n  onClick = new EventEmitter<Event>();\n\n  ngOnInit(): void {\n      this._checkItemsType();\n\n      if (this._checkItemsType() === 'object') {\n        this._createLabels();\n      }\n  }\n\n  private _checkItemsType(): string {\n    return typeof this.items;\n  }\n  \n  private _createLabels(): void {\n    let newItemsList: never[] = [];\n\n    this.items.forEach((item) => {\n      if (this.optionLabel) {\n        newItemsList = <never>[...newItemsList, item[<never>this.optionLabel]];\n      }\n    });\n\n    this.items = [...newItemsList];\n    this.items = SortingService.sortStringArray(<never>this.items);\n  }\n\n  public get classes(): string[] {\n    let classList = [\n      'select',\n      this._sizeMap[this.size],\n      this._themeMap[this.theme],\n    ];\n\n    if (this.isDisabled) {\n      classList = [...classList, 'select-disabled'];\n    }\n\n    if (this.state) {\n      classList = [...classList, this._stateMap[this.state]];\n    }\n\n    return classList;\n  }\n}\n",
             "styleUrl": "./select-dropdown.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<p>select-dropdown works!</p>\n"
+            "implements": [
+                "OnInit"
+            ],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 120
+                    }
+                }
+            },
+            "templateData": "<select [ngClass]=\"classes\">\n    <option disabled\n            selected>\n        {{label}}\n    </option>\n\n    @for (item of items; let index = $index; track index) {\n        <option>{{item}}</option>\n    }\n</select>"
         },
         {
             "name": "ToggleComponent",
@@ -753,7 +981,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 8,
+        "count": 12,
         "status": "low",
         "files": [
             {
@@ -849,9 +1077,9 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "SelectDropdownComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
+                "coveragePercent": 56,
+                "coverageCount": "9/16",
+                "status": "good"
             },
             {
                 "filePath": "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts",

@@ -208,6 +208,18 @@
       "productName": "Recycled Frozen Chair",
       "productImage": "https://loremflickr.com/640/480/Shirt?lock=6792037217075200",
       "id": 21
+    },
+    {
+      "department": "Sports",
+      "isbn": "978-1-56290-463-0",
+      "price": "$97.00",
+      "product": "Chips",
+      "productAdjective": "Generic",
+      "productDescription": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+      "productMaterial": "Wooden",
+      "productName": "Ergonomic Rubber Gloves",
+      "productImage": "https://loremflickr.com/640/480/Chips?lock=6806877358784512",
+      "id": 22
     }
   ]
 }
