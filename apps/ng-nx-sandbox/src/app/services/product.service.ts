@@ -45,4 +45,18 @@ export class ProductService {
     return this._http.post<ProductModel>(this.baseUrl, product)
       .pipe(map((p: IProductModel) => new ProductModel(p)));
   }
+
+  getPets() {
+    return this._http.get('http://localhost:3333/api/pets')
+      .pipe(map(pets => pets));
+  }
+  addPet() {
+    return this._http.post('http://localhost:3333/api/pets', {
+      name: 'Navi',
+      breed: 'Shorthair',
+      description: 'Orange tabby'
+    })
+      .pipe(map(pets => pets));
+  }
+
 }

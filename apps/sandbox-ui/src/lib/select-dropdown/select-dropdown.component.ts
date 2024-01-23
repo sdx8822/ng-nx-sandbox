@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SortingService } from '@ng-nx-sandbox/shared-services';
+import { SortingService } from '@ng-nx-sandbox/shared-libs';
 
 @Component({
   selector: 'ng-nx-sandbox-select-dropdown',

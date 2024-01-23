@@ -23,33 +23,32 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
-  rest-api:
+  pet-app-api:
+    extends:
+      file: docker-compose.base.yml
+      service: ng-nx-sandbox-base
+    command: npm run api:pet-app
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/pets
+    ports:
+      - "3333:3333"
+    depends_on:
+      - mongo
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
+  mock-rest-api:
     extends:
       file: docker-compose.base.yml
       service: ng-nx-sandbox-base
     command: npm run mock:api
     ports:
       - "3000:3000"
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-
-  graphql-api:
-    extends:
-      file: docker-compose.base.yml
-      service: ng-nx-sandbox-base
-    command: npm run mock:graphql-api
-    ports:
-      - "3300:3300"
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-
-  graphql-server:
-    extends:
-      file: docker-compose.base.yml
-      service: ng-nx-sandbox-base
-    command: npm run mock:graphql-server
-    ports:
-      - "3800:3800"
     extra_hosts:
       - "host.docker.internal:host-gateway"
 

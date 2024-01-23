@@ -1,21 +1,21 @@
 {
-  "name": "shared-services",
+  "name": "shared-libs",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "apps/shared-services/src",
+  "sourceRoot": "apps/shared-libs/src",
   "prefix": "lib",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:ng-packagr",
       "options": {
-        "project": "apps/shared-services/ng-package.json"
+        "project": "apps/shared-libs/ng-package.json"
       },
       "configurations": {
         "production": {
-          "tsConfig": "apps/shared-services/tsconfig.lib.prod.json"
+          "tsConfig": "apps/shared-libs/tsconfig.lib.prod.json"
         },
         "development": {
-          "tsConfig": "apps/shared-services/tsconfig.lib.json"
+          "tsConfig": "apps/shared-libs/tsconfig.lib.json"
         }
       },
       "defaultConfiguration": "production"
@@ -23,7 +23,7 @@
     "test": {
       "executor": "@angular-devkit/build-angular:karma",
       "options": {
-        "tsConfig": "apps/shared-services/tsconfig.spec.json",
+        "tsConfig": "apps/shared-libs/tsconfig.spec.json",
         "polyfills": [
           "zone.js",
           "zone.js/testing"

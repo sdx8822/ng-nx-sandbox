@@ -8,6 +8,127 @@
     "directives": [],
     "components": [
         {
+            "name": "AlertComponent",
+            "id": "component-AlertComponent-4e01915955c58cdd45d77251949e6e5e04aeadfb14d9ad21c21c8b1456831d06ed1239bec0b5b1354bf5fb9524b70f5de017b855e2812de1fd31c0c9c52d506c",
+            "file": "apps/sandbox-ui/src/lib/alert/alert.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ng-nx-sandbox-alert",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./alert.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "label",
+                    "defaultValue": "'This is an alert message!'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 646,
+                            "end": 659,
+                            "flags": 16842752,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 334,
+                            "tagName": {
+                                "pos": 647,
+                                "end": 655,
+                                "flags": 16842752,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 80,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nButton contents\n\n",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 31,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "state",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat is the state of the button? The state overrides the base theme.\n",
+                    "description": "<p>What is the state of the button? The state overrides the base theme.</p>\n",
+                    "line": 16,
+                    "type": "\"info\" | \"success\" | \"error\" | \"warning\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 38,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "_stateMap",
+                    "defaultValue": "{\n    info: 'btn-info',\n    success: 'btn-success',\n    error: 'btn-error',\n    warning: 'btn-warning'\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "optional": false,
+                    "description": "",
+                    "line": 18,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'ng-nx-sandbox-alert',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './alert.component.html',\n  styleUrl: './alert.component.scss',\n})\nexport class AlertComponent {\n  /**\n   * What is the state of the button? The state overrides the base theme.\n   */\n  @Input()\n  state?: 'info' | 'success' | 'error' | 'warning';\n\n  private _stateMap = {\n    info: 'btn-info',\n    success: 'btn-success',\n    error: 'btn-error',\n    warning: 'btn-warning'\n  };\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'This is an alert message!';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  // eslint-disable-next-line @angular-eslint/no-output-on-prefix\n  onClick = new EventEmitter<Event>();\n\n  // Do not create dynamic classes or they won't render\n  public get classes(): string[] {\n    let classList = [\n      'btn'\n    ];\n\n    if (this.state) {\n      classList = [...classList, this._stateMap[this.state]];\n    }\n\n    return classList;\n  }\n}\n",
+            "styleUrl": "./alert.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 41
+                    }
+                }
+            },
+            "templateData": "<div role=\"alert\"\n     [ngClass]=\"classes\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\"\n         fill=\"none\"\n         viewBox=\"0 0 24 24\"\n         class=\"stroke-info shrink-0 w-6 h-6\">\n        <path stroke-linecap=\"round\"\n              stroke-linejoin=\"round\"\n              stroke-width=\"2\"\n              d=\"M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\">\n        </path>\n    </svg>\n    \n    <span>{{label}}</span>\n</div>"
+        },
+        {
             "name": "ButtonComponent",
             "id": "component-ButtonComponent-d41bd0c1e018b66f343e1ebbeb1b66c553cb697e663d7781d3ca13dcab6d9f6e82c4dd787102c541d169cc2ad61d26cbae2da34de653647de1ea336e2d8aff81",
             "file": "apps/sandbox-ui/src/lib/button/button.component.ts",
@@ -195,7 +316,7 @@
         },
         {
             "name": "ButtonDropdownComponent",
-            "id": "component-ButtonDropdownComponent-672513f0c310d0f8564d33bdc30ce9939a93ab0d677e3d1d14b9a620b491fabc89cd70be0ca181e799c61b0d75a83f8ff0777c82dfd07a6ea159eda8d1710245",
+            "id": "component-ButtonDropdownComponent-aa1ead8f7a7d556149cc717de7219c72ff464a96813b08b8169ea20cbe6e15e5421e4bc0e86272d3a9a2bbb8c9746fca8be0bd57758995bf639c48bfa969225b",
             "file": "apps/sandbox-ui/src/lib/button-dropdown/button-dropdown.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -229,15 +350,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 621,
-                            "end": 634,
+                            "pos": 617,
+                            "end": 630,
                             "flags": 16842752,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 334,
                             "tagName": {
-                                "pos": 622,
-                                "end": 630,
+                                "pos": 618,
+                                "end": 626,
                                 "flags": 16842752,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -339,7 +460,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { SortingService } from '@ng-nx-sandbox/shared-services';\n\n@Component({\n  selector: 'ng-nx-sandbox-button-dropdown',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './button-dropdown.component.html',\n  styleUrl: './button-dropdown.component.scss',\n})\nexport class ButtonDropdownComponent implements OnInit {\n\n  /**\n   * What should we label the button dropdown?\n   */\n  @Input()\n  btnLabel = 'Dropdown'\n\n  /**\n   * What options should the dropdown consist of?\n   *\n   * @required\n   */\n  @Input()\n  items: string[] | object[] | number[] = [];\n\n  /**\n   * If items are not primitive types, how should we display the labels?\n   */\n  @Input()\n  optionLabel?: string;\n\n  /**\n   * If items are not primitive types, how should we save the values?\n   */\n  @Input()\n  optionValue?: string;\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  // eslint-disable-next-line @angular-eslint/no-output-on-prefix\n  onClick = new EventEmitter<Event>();\n\n  ngOnInit(): void {\n      this._checkItemsType();\n\n      if (this._checkItemsType() === 'object') {\n        this._createLabels();\n      }\n  }\n\n  private _checkItemsType(): string {\n    return typeof this.items;\n  }\n\n  private _createLabels(): void {\n    let newItemsList: never[] = [];\n\n    this.items.forEach((item) => {\n      if (this.optionLabel) {\n        newItemsList = <never>[...newItemsList, item[<never>this.optionLabel]];\n      }\n    });\n\n    this.items = [...newItemsList];\n    this.items = SortingService.sortStringArray(<never>this.items);\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { SortingService } from '@ng-nx-sandbox/shared-libs';\n\n@Component({\n  selector: 'ng-nx-sandbox-button-dropdown',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './button-dropdown.component.html',\n  styleUrl: './button-dropdown.component.scss',\n})\nexport class ButtonDropdownComponent implements OnInit {\n\n  /**\n   * What should we label the button dropdown?\n   */\n  @Input()\n  btnLabel = 'Dropdown'\n\n  /**\n   * What options should the dropdown consist of?\n   *\n   * @required\n   */\n  @Input()\n  items: string[] | object[] | number[] = [];\n\n  /**\n   * If items are not primitive types, how should we display the labels?\n   */\n  @Input()\n  optionLabel?: string;\n\n  /**\n   * If items are not primitive types, how should we save the values?\n   */\n  @Input()\n  optionValue?: string;\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  // eslint-disable-next-line @angular-eslint/no-output-on-prefix\n  onClick = new EventEmitter<Event>();\n\n  ngOnInit(): void {\n      this._checkItemsType();\n\n      if (this._checkItemsType() === 'object') {\n        this._createLabels();\n      }\n  }\n\n  private _checkItemsType(): string {\n    return typeof this.items;\n  }\n\n  private _createLabels(): void {\n    let newItemsList: never[] = [];\n\n    this.items.forEach((item) => {\n      if (this.optionLabel) {\n        newItemsList = <never>[...newItemsList, item[<never>this.optionLabel]];\n      }\n    });\n\n    this.items = [...newItemsList];\n    this.items = SortingService.sortStringArray(<never>this.items);\n  }\n}\n",
             "styleUrl": "./button-dropdown.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -352,7 +473,7 @@
         },
         {
             "name": "SelectDropdownComponent",
-            "id": "component-SelectDropdownComponent-4d74a1707183721d6fbccd4455d5d790af4b6e3c8adecb2ab7cb436c1e9445a717432d9a4dabdad3a817111899c3ba15e2c234ec0399899f71e20e9c0faa757c",
+            "id": "component-SelectDropdownComponent-1515cdda344503e9970fbbf279c6065c39918ca7e0e479f73459c9270611aa074934f071f4f0094a72d9528a08f9506d64132ebd26111bd1ff7b15b45f7bf30a",
             "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -386,15 +507,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 1558,
-                            "end": 1571,
+                            "pos": 1554,
+                            "end": 1567,
                             "flags": 16842752,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 334,
                             "tagName": {
-                                "pos": 1559,
-                                "end": 1567,
+                                "pos": 1555,
+                                "end": 1563,
                                 "flags": 16842752,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -417,15 +538,15 @@
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
-                            "pos": 1436,
-                            "end": 1449,
+                            "pos": 1432,
+                            "end": 1445,
                             "flags": 16842752,
                             "modifierFlagsCache": 0,
                             "transformFlags": 0,
                             "kind": 334,
                             "tagName": {
-                                "pos": 1437,
-                                "end": 1445,
+                                "pos": 1433,
+                                "end": 1441,
                                 "flags": 16842752,
                                 "modifierFlagsCache": 0,
                                 "transformFlags": 0,
@@ -599,7 +720,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { SortingService } from '@ng-nx-sandbox/shared-services';\n\n@Component({\n  selector: 'ng-nx-sandbox-select-dropdown',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './select-dropdown.component.html',\n  styleUrl: './select-dropdown.component.scss',\n})\nexport class SelectDropdownComponent implements OnInit {\n  /**\n   * What is the importance or purpose of this call to action?\n   */\n  @Input()\n  theme: 'primary' | 'secondary' | 'accent' | 'bordered' | 'ghost' = 'bordered';\n\n  private _themeMap = {\n    primary: 'select-primary',\n    secondary: 'select-secondary',\n    accent: 'select-accent',\n    bordered: 'select-bordered',\n    ghost: 'select-ghost'\n  }\n\n  /**\n   * What is the state of the dropdown? The state overrides the base theme.\n   */\n  @Input()\n  state?: 'info' | 'success' | 'error' | 'warning';\n\n  private _stateMap = {\n    info: 'select-info',\n    success: 'select-success',\n    error: 'seelct-error',\n    warning: 'select-warning'\n  };\n\n  /**\n   * Is the dropdown disabled?\n   */\n  @Input()\n  isDisabled = false;\n\n  /**\n   * How large should the dropdown be?\n   */\n  @Input()\n  size: 'xs' | 'sm' | 'md' | 'lg' = 'xs';\n\n  private _sizeMap = {\n    xs: 'select-xs',\n    sm: 'select-sm',\n    md: 'select-md',\n    lg: 'select-lg'\n  };\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Select an item';\n\n  /**\n   * What options should the dropdown consist of?\n   *\n   * @required\n   */\n  @Input()\n  items: string[] | object[] | number[] = [];\n\n  /**\n   * If items are not primitive types, how should we display the labels?\n   */\n  @Input()\n  optionLabel?: string;\n\n  /**\n   * If items are not primitive types, how should we save the values?\n   */\n  @Input()\n  optionValue?: string;\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  // eslint-disable-next-line @angular-eslint/no-output-on-prefix\n  onClick = new EventEmitter<Event>();\n\n  ngOnInit(): void {\n      this._checkItemsType();\n\n      if (this._checkItemsType() === 'object') {\n        this._createLabels();\n      }\n  }\n\n  private _checkItemsType(): string {\n    return typeof this.items;\n  }\n  \n  private _createLabels(): void {\n    let newItemsList: never[] = [];\n\n    this.items.forEach((item) => {\n      if (this.optionLabel) {\n        newItemsList = <never>[...newItemsList, item[<never>this.optionLabel]];\n      }\n    });\n\n    this.items = [...newItemsList];\n    this.items = SortingService.sortStringArray(<never>this.items);\n  }\n\n  public get classes(): string[] {\n    let classList = [\n      'select',\n      this._sizeMap[this.size],\n      this._themeMap[this.theme],\n    ];\n\n    if (this.isDisabled) {\n      classList = [...classList, 'select-disabled'];\n    }\n\n    if (this.state) {\n      classList = [...classList, this._stateMap[this.state]];\n    }\n\n    return classList;\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { SortingService } from '@ng-nx-sandbox/shared-libs';\n\n@Component({\n  selector: 'ng-nx-sandbox-select-dropdown',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './select-dropdown.component.html',\n  styleUrl: './select-dropdown.component.scss',\n})\nexport class SelectDropdownComponent implements OnInit {\n  /**\n   * What is the importance or purpose of this call to action?\n   */\n  @Input()\n  theme: 'primary' | 'secondary' | 'accent' | 'bordered' | 'ghost' = 'bordered';\n\n  private _themeMap = {\n    primary: 'select-primary',\n    secondary: 'select-secondary',\n    accent: 'select-accent',\n    bordered: 'select-bordered',\n    ghost: 'select-ghost'\n  }\n\n  /**\n   * What is the state of the dropdown? The state overrides the base theme.\n   */\n  @Input()\n  state?: 'info' | 'success' | 'error' | 'warning';\n\n  private _stateMap = {\n    info: 'select-info',\n    success: 'select-success',\n    error: 'seelct-error',\n    warning: 'select-warning'\n  };\n\n  /**\n   * Is the dropdown disabled?\n   */\n  @Input()\n  isDisabled = false;\n\n  /**\n   * How large should the dropdown be?\n   */\n  @Input()\n  size: 'xs' | 'sm' | 'md' | 'lg' = 'xs';\n\n  private _sizeMap = {\n    xs: 'select-xs',\n    sm: 'select-sm',\n    md: 'select-md',\n    lg: 'select-lg'\n  };\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Select an item';\n\n  /**\n   * What options should the dropdown consist of?\n   *\n   * @required\n   */\n  @Input()\n  items: string[] | object[] | number[] = [];\n\n  /**\n   * If items are not primitive types, how should we display the labels?\n   */\n  @Input()\n  optionLabel?: string;\n\n  /**\n   * If items are not primitive types, how should we save the values?\n   */\n  @Input()\n  optionValue?: string;\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  // eslint-disable-next-line @angular-eslint/no-output-on-prefix\n  onClick = new EventEmitter<Event>();\n\n  ngOnInit(): void {\n      this._checkItemsType();\n\n      if (this._checkItemsType() === 'object') {\n        this._createLabels();\n      }\n  }\n\n  private _checkItemsType(): string {\n    return typeof this.items;\n  }\n  \n  private _createLabels(): void {\n    let newItemsList: never[] = [];\n\n    this.items.forEach((item) => {\n      if (this.optionLabel) {\n        newItemsList = <never>[...newItemsList, item[<never>this.optionLabel]];\n      }\n    });\n\n    this.items = [...newItemsList];\n    this.items = SortingService.sortStringArray(<never>this.items);\n  }\n\n  public get classes(): string[] {\n    let classList = [\n      'select',\n      this._sizeMap[this.size],\n      this._themeMap[this.theme],\n    ];\n\n    if (this.isDisabled) {\n      classList = [...classList, 'select-disabled'];\n    }\n\n    if (this.state) {\n      classList = [...classList, this._stateMap[this.state]];\n    }\n\n    return classList;\n  }\n}\n",
             "styleUrl": "./select-dropdown.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -981,7 +1102,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 12,
+        "count": 15,
         "status": "low",
         "files": [
             {
@@ -993,6 +1114,15 @@
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/alert/alert.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AlertComponent",
+                "coveragePercent": 60,
+                "coverageCount": "3/5",
+                "status": "good"
             },
             {
                 "filePath": "apps/sandbox-ui/src/lib/button-dropdown/button-dropdown.component.stories.ts",

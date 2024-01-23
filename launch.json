@@ -1,0 +1,6 @@
+{
+    "name": "Debug API:Pets-app",
+    "type": "node",
+    "request": "attach",
+    "port": 7777
+}

@@ -1,4 +1,4 @@
-import { ButtonComponent, ButtonDropdownComponent, SelectDropdownComponent } from '@ng-nx-sandbox/sandbox-ui';
+import { AlertComponent, ButtonComponent, ButtonDropdownComponent, SelectDropdownComponent } from '@ng-nx-sandbox/sandbox-ui';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,7 +9,7 @@ import { ProductModel } from '../../shared/models';
 @Component({
   selector: 'ng-nx-sandbox-products',
   standalone: true,
-  imports: [CommonModule, ButtonComponent, ButtonDropdownComponent, SelectDropdownComponent],
+  imports: [CommonModule, AlertComponent, ButtonComponent, ButtonDropdownComponent, SelectDropdownComponent],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
 })
@@ -20,6 +20,10 @@ export class ProductsComponent implements OnInit {
   constructor(private _productService: ProductService) {}
 
   ngOnInit(): void {
+    this.getProducts();
+  }
+
+  getProducts(): void {
     this._productService.getProducts()
       .subscribe((products: ProductModel[]) => {
         console.log({products});
@@ -28,17 +32,20 @@ export class ProductsComponent implements OnInit {
       .add(() => this.isLoading = false);
   }
 
-  getProducts(): void {
-    this._productService.getProductsGQL()
-      .subscribe((products) => {
-        console.log({products});
-      });
-  }
-
   createProduct(): void {
     this._productService.addProduct()
       .subscribe((p) => {
         console.log({p});
       });
+  }
+
+  getPets(): void {
+    this._productService.getPets()
+      .subscribe((pets) => console.log({pets}));
+  }
+
+  addPet(): void {
+    this._productService.addPet()
+      .subscribe((created) => console.log({created}));
   }
 }

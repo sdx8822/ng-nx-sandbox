@@ -10,6 +10,17 @@
                       (click)="getProducts()">
 </ng-nx-sandbox-button>
 
+<ng-nx-sandbox-button [theme]="'accent'"
+                      [label]="'Get Pets'"
+                      [size]="'lg'"
+                      (click)="getPets()">
+</ng-nx-sandbox-button>
+
+<ng-nx-sandbox-button [theme]="'accent'"
+                      [label]="'Add Pet'"
+                      [size]="'lg'"
+                      (click)="addPet()">
+</ng-nx-sandbox-button>
 
 @if (!isLoading) {
 <ng-nx-sandbox-button-dropdown [items]="products"

@@ -4,7 +4,7 @@ const jsonGraphqlExpress = require('json-graphql-server').default;
 const ip = require('ip');
 const db = require('./db');
 
-const PORT = 3300;
+const PORT = 3400;
 const IP = ip.address();
 const app = express();
 

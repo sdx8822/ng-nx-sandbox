@@ -220,6 +220,30 @@
       "productName": "Ergonomic Rubber Gloves",
       "productImage": "https://loremflickr.com/640/480/Chips?lock=6806877358784512",
       "id": 22
+    },
+    {
+      "department": "Shoes",
+      "isbn": "978-0-02-292771-4",
+      "price": "$763.00",
+      "product": "Pizza",
+      "productAdjective": "Incredible",
+      "productDescription": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "productMaterial": "Plastic",
+      "productName": "Licensed Steel Gloves",
+      "productImage": "https://loremflickr.com/640/480/Pizza?lock=8972630648422400",
+      "id": 23
+    },
+    {
+      "department": "Automotive",
+      "isbn": "978-1-4961-4844-5",
+      "price": "$907.00",
+      "product": "Towels",
+      "productAdjective": "Unbranded",
+      "productDescription": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+      "productMaterial": "Plastic",
+      "productName": "Elegant Cotton Pants",
+      "productImage": "https://loremflickr.com/640/480/Towels?lock=6743459815751680",
+      "id": 24
     }
   ]
 }
