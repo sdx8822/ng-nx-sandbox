@@ -17,9 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "@ng-nx-sandbox/sandbox-ui": ["apps/sandbox-ui/src/index.ts"],
-      "@ng-nx-sandbox/shared-libs": [
-        "apps/shared-libs/src/public-api.ts"
-      ],
+      "@ng-nx-sandbox/shared-libs": ["apps/shared-libs/src/public-api.ts"],
       "apollo-angular": ["node_modules/apollo-angular"]
     }
   },

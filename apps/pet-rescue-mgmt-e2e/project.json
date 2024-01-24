@@ -1,0 +1,30 @@
+{
+  "name": "pet-rescue-mgmt-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/pet-rescue-mgmt-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/pet-rescue-mgmt-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "pet-rescue-mgmt:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "pet-rescue-mgmt:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "pet-rescue-mgmt:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["pet-rescue-mgmt"]
+}

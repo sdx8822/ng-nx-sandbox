@@ -1,12 +1,12 @@
 version: '3'
 
 services:
-  # Angular Application
+  # Angular Sandbox
   ng-nx-sandbox:
     extends:
       file: docker-compose.base.yml
       service: ng-nx-sandbox-base
-    command: npm run dev
+    command: npm run dev:sandbox
     ports:
       - "4200:4200"
     extra_hosts:
@@ -23,11 +23,23 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
-  pet-app-api:
+  # Angular Pet Rescue Mgmt App
+  pet-rescue-mgmt-ui:
     extends:
       file: docker-compose.base.yml
       service: ng-nx-sandbox-base
-    command: npm run api:pet-app
+    command: npm run dev:pet-rescue-mgmt
+    ports:
+      - "4888:4888"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  # API for Pet Rescue Mgmt App
+  pet-rescue-mgmt-api:
+    extends:
+      file: docker-compose.base.yml
+      service: ng-nx-sandbox-base
+    command: npm run api:pet-rescue-mgmt
     environment:
       - MONGO_URI=mongodb://mongo:27017/pets
     ports:

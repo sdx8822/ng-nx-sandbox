@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "nx serve ng-nx-sandbox --host=0.0.0.0",
+    "dev:pet-rescue-mgmt": "nx serve pet-rescue-mgmt --host=0.0.0.0",
+    "dev:sandbox": "nx serve ng-nx-sandbox --host=0.0.0.0",
     "storybook:run": "nx run sandbox-ui:storybook --host=0.0.0.0",
     "storybook:stories": "nx g @nx/angular:stories --project=sandbox-ui",
-    "api:pet-app": "nx run api:serve",
+    "api:pet-rescue-mgmt": "nx run api:serve",
     "mock:api": "node apps/mock-server/server",
     "mock:graphql-api": "node apps/mock-server/graphql-server",
     "mock:graphql-server": "json-graphql-server apps/mock-server/db.json --p 3800",

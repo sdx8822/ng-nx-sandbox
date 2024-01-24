@@ -15,9 +15,9 @@
 
 Run the following commands at the project's root:
 
-### Angular Application
+### Angular Pet Rescue Application
 ```
-npm run dev
+npm run dev:pet-rescue-mgmt
 ```
 
 ### UI Library and Storybook Documentation
@@ -25,14 +25,9 @@ npm run dev
 npm run storybook:run
 ```
 
-### Mock RESTful API server
+### Pet Rescue RESTful API server
 ```
-npm run mock:api
-```
-
-### Mock GraphQL API server
-```
-npm run mock:graphql-server
+npm run api:pet-rescue-mgmt
 ```
 
 # NgNxSandbox

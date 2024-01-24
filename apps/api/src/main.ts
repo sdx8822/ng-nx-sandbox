@@ -9,7 +9,7 @@ import cors from 'cors';
 import * as path from 'path';
 
 import { DBHelper } from './app/helper/db.helper';
-import { PetService } from './app/pet-app-api/pet/pet.service';
+import { PetService } from './app/pet-rescue-mgmt/pet/pet.service';
 
 const app = express();
 

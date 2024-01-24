@@ -1,0 +1,90 @@
+{
+  "name": "pet-rescue-mgmt",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "ng-nx-sandbox",
+  "sourceRoot": "apps/pet-rescue-mgmt/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/pet-rescue-mgmt",
+        "index": "apps/pet-rescue-mgmt/src/index.html",
+        "browser": "apps/pet-rescue-mgmt/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/pet-rescue-mgmt/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/pet-rescue-mgmt/src/favicon.ico",
+          "apps/pet-rescue-mgmt/src/assets"
+        ],
+        "styles": ["apps/pet-rescue-mgmt/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "options": {
+        "port": 4888
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "pet-rescue-mgmt:build:production"
+        },
+        "development": {
+          "buildTarget": "pet-rescue-mgmt:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "pet-rescue-mgmt:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/pet-rescue-mgmt/jest.config.ts"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "pet-rescue-mgmt:build",
+        "staticFilePath": "dist/apps/pet-rescue-mgmt/browser"
+      }
+    }
+  }
+}
