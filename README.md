@@ -5,7 +5,7 @@
 - Download Docker for your local machine
 - Right click "docker-compose.yml" and "Compose Up"
 
-- View Angular application at port 4200
+- View Angular application at port 4888
 - View the UI library and Storybook documentation page at port 4400
 
 
