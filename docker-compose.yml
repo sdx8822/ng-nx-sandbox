@@ -2,15 +2,15 @@ version: '3'
 
 services:
   # Angular Sandbox
-  ng-nx-sandbox:
-    extends:
-      file: docker-compose.base.yml
-      service: ng-nx-sandbox-base
-    command: npm run dev:sandbox
-    ports:
-      - "4200:4200"
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+  # ng-nx-sandbox:
+  #   extends:
+  #     file: docker-compose.base.yml
+  #     service: ng-nx-sandbox-base
+  #   command: npm run dev:sandbox
+  #   ports:
+  #     - "4200:4200"
+  #   extra_hosts:
+  #     - "host.docker.internal:host-gateway"
 
   # UI Library
   sandbox-ui:
@@ -30,7 +30,7 @@ services:
       service: ng-nx-sandbox-base
     command: npm run dev:pet-rescue-mgmt
     ports:
-      - "4888:4888"
+      - "4444:4444"
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
@@ -54,15 +54,15 @@ services:
     ports:
       - "27017:27017"
 
-  mock-rest-api:
-    extends:
-      file: docker-compose.base.yml
-      service: ng-nx-sandbox-base
-    command: npm run mock:api
-    ports:
-      - "3000:3000"
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+  # mock-rest-api:
+  #   extends:
+  #     file: docker-compose.base.yml
+  #     service: ng-nx-sandbox-base
+  #   command: npm run mock:api
+  #   ports:
+  #     - "3000:3000"
+  #   extra_hosts:
+  #     - "host.docker.internal:host-gateway"
 
 volumes:
   mono-node-modules: null

@@ -3,6 +3,7 @@
     "target": "es2022",
     "useDefineForClassFields": false,
     "esModuleInterop": true,
+    "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,

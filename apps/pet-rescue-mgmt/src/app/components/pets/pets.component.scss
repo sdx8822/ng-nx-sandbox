@@ -1,0 +1,8 @@
+.call-to-actions-container {
+    display: flex;
+    flex-flow: row;
+
+    > * {
+        margin-left: 1rem;
+    }
+}

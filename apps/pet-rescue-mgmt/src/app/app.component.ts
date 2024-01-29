@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+
+import { PetsComponent } from './components/pets/pets.component';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [PetsComponent, RouterModule],
   selector: 'ng-nx-sandbox-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
