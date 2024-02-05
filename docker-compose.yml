@@ -41,7 +41,7 @@ services:
       service: ng-nx-sandbox-base
     command: npm run api:pet-rescue-mgmt
     environment:
-      - MONGO_URI=mongodb://mongo:27017/pets
+      - MONGO_URI=mongodb://mongo:27017/pets-mgmt
     ports:
       - "3333:3333"
     depends_on:
@@ -53,6 +53,8 @@ services:
     image: mongo:latest
     ports:
       - "27017:27017"
+    volumes:
+      - mongodata:/data/db
 
   # mock-rest-api:
   #   extends:
@@ -66,3 +68,4 @@ services:
 
 volumes:
   mono-node-modules: null
+  mongodata:
