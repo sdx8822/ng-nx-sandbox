@@ -75,6 +75,7 @@ export class ButtonComponent {
   public get classes(): string[] {
     let classList = [
       'btn',
+      'rounded-full',
       this._sizeMap[this.size],
       this._themeMap[this.theme],
     ];

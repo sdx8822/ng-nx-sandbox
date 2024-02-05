@@ -7,7 +7,7 @@ export class PetModel implements IPetModel {
         }
     }
 
-    id!: string;
+    id?: string;
     name!: string;
     breed!: string;
     description!: string;
@@ -16,7 +16,7 @@ export class PetModel implements IPetModel {
 }
 
 export interface IPetModel {
-    id: string;
+    id?: string;
     name: string;
     breed: string;
     description: string;

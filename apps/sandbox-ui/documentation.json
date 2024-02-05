@@ -129,8 +129,190 @@
             "templateData": "<div role=\"alert\"\n     [ngClass]=\"classes\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\"\n         fill=\"none\"\n         viewBox=\"0 0 24 24\"\n         class=\"stroke-info shrink-0 w-6 h-6\">\n        <path stroke-linecap=\"round\"\n              stroke-linejoin=\"round\"\n              stroke-width=\"2\"\n              d=\"M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z\">\n        </path>\n    </svg>\n    \n    <span>{{label}}</span>\n</div>"
         },
         {
+            "name": "BadgeComponent",
+            "id": "component-BadgeComponent-13d2cec774c180866eedb0ffe6d3480c6ec12e78cbdfb954ddf8844040e888e671c854643dca2de8a88ebc25abb95ce3a84c24f213602e42631740f7dd2d5392",
+            "file": "apps/sandbox-ui/src/lib/badge/badge.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ng-nx-sandbox-badge",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./badge.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "asButton",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nShould the input field be disabled?\n",
+                    "description": "<p>Should the input field be disabled?</p>\n",
+                    "line": 75,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "iconClass",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nShould there be some instructions in an empty input box?\n",
+                    "description": "<p>Should there be some instructions in an empty input box?</p>\n",
+                    "line": 57,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "isDisabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nShould the input field be disabled?\n",
+                    "description": "<p>Should the input field be disabled?</p>\n",
+                    "line": 69,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Badge'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nShould there be some instructions in an empty input box?\n",
+                    "description": "<p>Should there be some instructions in an empty input box?</p>\n",
+                    "line": 63,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'xs'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nHow large should the text input box be?\n",
+                    "description": "<p>How large should the text input box be?</p>\n",
+                    "line": 44,
+                    "type": "\"xs\" | \"sm\" | \"md\" | \"lg\"",
+                    "decorators": []
+                },
+                {
+                    "name": "state",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat is the state of the text input? The state overrides the base theme.\n",
+                    "description": "<p>What is the state of the text input? The state overrides the base theme.</p>\n",
+                    "line": 31,
+                    "type": "\"info\" | \"success\" | \"error\" | \"warning\"",
+                    "decorators": []
+                },
+                {
+                    "name": "theme",
+                    "defaultValue": "'secondary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat is the importance or purpose of this call to action?\n",
+                    "description": "<p>What is the importance or purpose of this call to action?</p>\n",
+                    "line": 16,
+                    "type": "\"primary\" | \"secondary\" | \"accent\" | \"neutral\" | \"ghost\" | \"outline\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 82,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "_sizeMap",
+                    "defaultValue": "{\n    xs: 'badge-xs',\n    sm: 'badge-sm',\n    md: 'badge-md',\n    lg: 'badge-lg'\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "optional": false,
+                    "description": "",
+                    "line": 46,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "_stateMap",
+                    "defaultValue": "{\n    info: 'badge-info',\n    success: 'badge-success',\n    error: 'badge-error',\n    warning: 'badge-warning'\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "optional": false,
+                    "description": "",
+                    "line": 33,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "_themeMap",
+                    "defaultValue": "{\n    primary: 'badge-primary',\n    secondary: 'badge-secondary',\n    accent: 'badge-accent',\n    neutral: 'badge-neutral',\n    ghost: 'badge-ghost',\n    outline: 'badge-outline'\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "optional": false,
+                    "description": "",
+                    "line": 18,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'ng-nx-sandbox-badge',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './badge.component.html',\n  styleUrl: './badge.component.scss',\n})\nexport class BadgeComponent {\n  /**\n   * What is the importance or purpose of this call to action?\n   */\n  @Input()\n  theme: 'primary' | 'secondary' | 'accent' | 'neutral' | 'ghost' | 'outline' = 'secondary';\n\n  private _themeMap = {\n    primary: 'badge-primary',\n    secondary: 'badge-secondary',\n    accent: 'badge-accent',\n    neutral: 'badge-neutral',\n    ghost: 'badge-ghost',\n    outline: 'badge-outline'\n  }\n\n  /**\n   * What is the state of the text input? The state overrides the base theme.\n   */\n  @Input()\n  state?: 'info' | 'success' | 'error' | 'warning';\n\n  private _stateMap = {\n    info: 'badge-info',\n    success: 'badge-success',\n    error: 'badge-error',\n    warning: 'badge-warning'\n  };\n\n  /**\n   * How large should the text input box be?\n   */\n  @Input()\n  size: 'xs' | 'sm' | 'md' | 'lg' = 'xs';\n\n  private _sizeMap = {\n    xs: 'badge-xs',\n    sm: 'badge-sm',\n    md: 'badge-md',\n    lg: 'badge-lg'\n  };\n\n  /**\n   * Should there be some instructions in an empty input box?\n   */\n  @Input()\n  iconClass = '';\n\n  /**\n   * Should there be some instructions in an empty input box?\n   */\n  @Input()\n  label = 'Badge';\n\n  /**\n   * Should the input field be disabled?\n   */\n  @Input()\n  isDisabled = false;\n\n  /**\n   * Should the input field be disabled?\n   */\n  @Input()\n  asButton = false;\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  // eslint-disable-next-line @angular-eslint/no-output-on-prefix\n  onClick = new EventEmitter<Event>();\n\n  // Do not create dynamic classes or they won't render\n  public get classes(): string[] {\n    let classList = [\n      'badge',\n      'rounded-full',\n      this._sizeMap[this.size],\n      this._themeMap[this.theme],\n    ];\n\n    if (this.state) {\n      classList = [...classList, this._stateMap[this.state]];\n    }\n\n    return classList;\n  }\n}\n",
+            "styleUrl": "./badge.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 85
+                    }
+                }
+            },
+            "templateData": "<span [ngClass]=\"classes\">\n    <i [ngClass]=\"iconClass\"></i>\n    <span>{{label}}</span>\n</span>"
+        },
+        {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-d41bd0c1e018b66f343e1ebbeb1b66c553cb697e663d7781d3ca13dcab6d9f6e82c4dd787102c541d169cc2ad61d26cbae2da34de653647de1ea336e2d8aff81",
+            "id": "component-ButtonComponent-a6594ff21484767c408071b257aa13a427b7cfb81f4191089c343bd5cca7b8f03113dec54d993b5061bd0dbd7cbecc09d74a71c79a2a03b5200be8bba3385931",
             "file": "apps/sandbox-ui/src/lib/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -291,7 +473,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'ng-nx-sandbox-button',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n})\nexport class ButtonComponent {\n  /**\n   * What is the importance or purpose of this call to action?\n   */\n  @Input()\n  theme: 'primary' | 'secondary' | 'accent' | 'neutral' | 'ghost' | 'link' = 'secondary';\n\n  private _themeMap = {\n    primary: 'btn-primary',\n    secondary: 'btn-secondary',\n    accent: 'btn-accent',\n    neutral: 'btn-neutral',\n    ghost: 'btn-ghost',\n    link: 'btn-link'\n  }\n\n  /**\n   * Is the button disabled?\n   */\n  @Input()\n  isDisabled = false;\n\n  /**\n   * What is the state of the button? The state overrides the base theme.\n   */\n  @Input()\n  state?: 'info' | 'success' | 'error' | 'warning';\n\n  private _stateMap = {\n    info: 'btn-info',\n    success: 'btn-success',\n    error: 'btn-error',\n    warning: 'btn-warning'\n  };\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'xs' | 'sm' | 'md' | 'lg' = 'xs';\n\n  private _sizeMap = {\n    xs: 'btn-xs',\n    sm: 'btn-sm',\n    md: 'btn-md',\n    lg: 'btn-lg'\n  };\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  // eslint-disable-next-line @angular-eslint/no-output-on-prefix\n  onClick = new EventEmitter<Event>();\n\n  // Do not create dynamic classes or they won't render\n  public get classes(): string[] {\n    let classList = [\n      'btn',\n      this._sizeMap[this.size],\n      this._themeMap[this.theme],\n    ];\n\n    if (this.isDisabled) {\n      classList = [...classList, 'btn-disabled'];\n    }\n\n    if (this.state) {\n      classList = [...classList, this._stateMap[this.state]];\n    }\n\n    return classList;\n  }\n}",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'ng-nx-sandbox-button',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n})\nexport class ButtonComponent {\n  /**\n   * What is the importance or purpose of this call to action?\n   */\n  @Input()\n  theme: 'primary' | 'secondary' | 'accent' | 'neutral' | 'ghost' | 'link' = 'secondary';\n\n  private _themeMap = {\n    primary: 'btn-primary',\n    secondary: 'btn-secondary',\n    accent: 'btn-accent',\n    neutral: 'btn-neutral',\n    ghost: 'btn-ghost',\n    link: 'btn-link'\n  }\n\n  /**\n   * Is the button disabled?\n   */\n  @Input()\n  isDisabled = false;\n\n  /**\n   * What is the state of the button? The state overrides the base theme.\n   */\n  @Input()\n  state?: 'info' | 'success' | 'error' | 'warning';\n\n  private _stateMap = {\n    info: 'btn-info',\n    success: 'btn-success',\n    error: 'btn-error',\n    warning: 'btn-warning'\n  };\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'xs' | 'sm' | 'md' | 'lg' = 'xs';\n\n  private _sizeMap = {\n    xs: 'btn-xs',\n    sm: 'btn-sm',\n    md: 'btn-md',\n    lg: 'btn-lg'\n  };\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  // eslint-disable-next-line @angular-eslint/no-output-on-prefix\n  onClick = new EventEmitter<Event>();\n\n  // Do not create dynamic classes or they won't render\n  public get classes(): string[] {\n    let classList = [\n      'btn',\n      'rounded-full',\n      this._sizeMap[this.size],\n      this._themeMap[this.theme],\n    ];\n\n    if (this.isDisabled) {\n      classList = [...classList, 'btn-disabled'];\n    }\n\n    if (this.state) {\n      classList = [...classList, this._stateMap[this.state]];\n    }\n\n    return classList;\n  }\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -743,6 +925,166 @@
             "templateData": "<select [ngClass]=\"classes\">\n    <option disabled\n            selected>\n        {{label}}\n    </option>\n\n    @for (item of items; let index = $index; track index) {\n        <option>{{item}}</option>\n    }\n</select>"
         },
         {
+            "name": "TextInputComponent",
+            "id": "component-TextInputComponent-08772e14b951c2c688f203ab85526db24abe26dded68c09fd481609c08f407882b6f577bb638b06129339582e8e0305852fab457ea4fa3e3df55422016c698c7",
+            "file": "apps/sandbox-ui/src/lib/text-input/text-input.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ng-nx-sandbox-text-input",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./text-input.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "isDisabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nShould the input field be disabled?\n",
+                    "description": "<p>Should the input field be disabled?</p>\n",
+                    "line": 62,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "'Enter a text.'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nShould there be some instructions in an empty input box?\n",
+                    "description": "<p>Should there be some instructions in an empty input box?</p>\n",
+                    "line": 56,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'xs'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nHow large should the text input box be?\n",
+                    "description": "<p>How large should the text input box be?</p>\n",
+                    "line": 43,
+                    "type": "\"xs\" | \"sm\" | \"md\" | \"lg\"",
+                    "decorators": []
+                },
+                {
+                    "name": "state",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat is the state of the text input? The state overrides the base theme.\n",
+                    "description": "<p>What is the state of the text input? The state overrides the base theme.</p>\n",
+                    "line": 30,
+                    "type": "\"info\" | \"success\" | \"error\" | \"warning\"",
+                    "decorators": []
+                },
+                {
+                    "name": "theme",
+                    "defaultValue": "'secondary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat is the importance or purpose of this call to action?\n",
+                    "description": "<p>What is the importance or purpose of this call to action?</p>\n",
+                    "line": 16,
+                    "type": "\"primary\" | \"secondary\" | \"accent\" | \"bordered\" | \"ghost\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 69,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "_sizeMap",
+                    "defaultValue": "{\n    xs: 'input-xs',\n    sm: 'input-sm',\n    md: 'input-md',\n    lg: 'input-lg'\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "optional": false,
+                    "description": "",
+                    "line": 45,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "_stateMap",
+                    "defaultValue": "{\n    info: 'input-info',\n    success: 'input-success',\n    error: 'input-error',\n    warning: 'input-warning'\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "optional": false,
+                    "description": "",
+                    "line": 32,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "_themeMap",
+                    "defaultValue": "{\n    primary: 'input-primary',\n    secondary: 'input-secondary',\n    accent: 'input-accent',\n    bordered: 'input-bordered',\n    ghost: 'input-ghost'\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "optional": false,
+                    "description": "",
+                    "line": 18,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'ng-nx-sandbox-text-input',\n  standalone: true,\n  imports: [CommonModule],\n  templateUrl: './text-input.component.html',\n  styleUrl: './text-input.component.scss',\n})\nexport class TextInputComponent {\n  /**\n   * What is the importance or purpose of this call to action?\n   */\n  @Input()\n  theme: 'primary' | 'secondary' | 'accent' | 'bordered' | 'ghost' = 'secondary';\n\n  private _themeMap = {\n    primary: 'input-primary',\n    secondary: 'input-secondary',\n    accent: 'input-accent',\n    bordered: 'input-bordered',\n    ghost: 'input-ghost'\n  }\n\n  /**\n   * What is the state of the text input? The state overrides the base theme.\n   */\n  @Input()\n  state?: 'info' | 'success' | 'error' | 'warning';\n\n  private _stateMap = {\n    info: 'input-info',\n    success: 'input-success',\n    error: 'input-error',\n    warning: 'input-warning'\n  };\n\n  /**\n   * How large should the text input box be?\n   */\n  @Input()\n  size: 'xs' | 'sm' | 'md' | 'lg' = 'xs';\n\n  private _sizeMap = {\n    xs: 'input-xs',\n    sm: 'input-sm',\n    md: 'input-md',\n    lg: 'input-lg'\n  };\n\n  /**\n   * Should there be some instructions in an empty input box?\n   */\n  @Input()\n  placeholder = 'Enter a text.';\n\n  /**\n   * Should the input field be disabled?\n   */\n  @Input()\n  isDisabled = false;\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  // eslint-disable-next-line @angular-eslint/no-output-on-prefix\n  onClick = new EventEmitter<Event>();\n\n  // Do not create dynamic classes or they won't render\n  public get classes(): string[] {\n    let classList = [\n      'input',\n      'rounded-full',\n      this._sizeMap[this.size],\n      this._themeMap[this.theme],\n    ];\n\n    if (this.state) {\n      classList = [...classList, this._stateMap[this.state]];\n    }\n\n    return classList;\n  }\n}\n",
+            "styleUrl": "./text-input.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 72
+                    }
+                }
+            },
+            "templateData": "<input type=\"text\"\n       [disabled]=\"isDisabled\"\n       [placeholder]=\"placeholder\"\n       [ngClass]=\"classes\" />"
+        },
+        {
             "name": "ToggleComponent",
             "id": "component-ToggleComponent-e525d2d6e75947a5c47128fdd50ee05ee5032bdfc74e7248fce1c4f8cfc1535c44db8660878ae180df07688944ac6740d7bccf3025596e078a9852f150709ee3",
             "file": "apps/sandbox-ui/src/lib/toggle/toggle.component.ts",
@@ -822,6 +1164,16 @@
                 "name": "Heading",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    label: 'This is an alert message!',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/alert works!/gi)).toBeTruthy();\n  },\n}"
+            },
+            {
+                "name": "Heading",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -842,11 +1194,41 @@
                 "name": "Heading",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    theme: 'bordered',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Select an item',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/select-dropdown works!/gi)).toBeTruthy();\n  },\n}"
+            },
+            {
+                "name": "Heading",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/text-input/text-input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    theme: 'secondary',\n    size: 'xs',\n    placeholder: 'Enter a text.',\n    isDisabled: false,\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/text-input works!/gi)).toBeTruthy();\n  },\n}"
+            },
+            {
+                "name": "Heading",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    labels: [],\n    nullablbe: true,\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/toggle works!/gi)).toBeTruthy();\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<AlertComponent>",
+                "defaultValue": "{\n  component: AlertComponent,\n  title: 'AlertComponent',\n}"
             },
             {
                 "name": "meta",
@@ -872,11 +1254,41 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<SelectDropdownComponent>",
+                "defaultValue": "{\n  component: SelectDropdownComponent,\n  title: 'SelectDropdownComponent',\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/text-input/text-input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<TextInputComponent>",
+                "defaultValue": "{\n  component: TextInputComponent,\n  title: 'TextInputComponent',\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ToggleComponent>",
                 "defaultValue": "{\n  component: ToggleComponent,\n  title: 'ToggleComponent',\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    label: 'This is an alert message!',\n  },\n}"
             },
             {
                 "name": "Primary",
@@ -902,6 +1314,26 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    theme: 'bordered',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Select an item',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/text-input/text-input.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    theme: 'secondary',\n    size: 'xs',\n    placeholder: 'Enter a text.',\n    isDisabled: false,\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -911,6 +1343,17 @@
         ],
         "functions": [],
         "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<AlertComponent>",
+                "file": "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
             {
                 "name": "Story",
                 "ctype": "miscellaneous",
@@ -928,6 +1371,28 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<ButtonDropdownComponent>",
                 "file": "apps/sandbox-ui/src/lib/button-dropdown/button-dropdown.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<SelectDropdownComponent>",
+                "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<TextInputComponent>",
+                "file": "apps/sandbox-ui/src/lib/text-input/text-input.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -957,6 +1422,38 @@
                     "deprecationMessage": "",
                     "type": "StorybookConfig",
                     "defaultValue": "{\n  stories: ['../**/*.stories.@(js|jsx|ts|tsx|mdx)'],\n  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],\n  framework: {\n    name: '@storybook/angular',\n    options: {},\n  },\n  docs: {\n    autodocs: true,\n    defaultName: 'Documentation'\n  }\n}"
+                }
+            ],
+            "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts": [
+                {
+                    "name": "Heading",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    label: 'This is an alert message!',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/alert works!/gi)).toBeTruthy();\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<AlertComponent>",
+                    "defaultValue": "{\n  component: AlertComponent,\n  title: 'AlertComponent',\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    label: 'This is an alert message!',\n  },\n}"
                 }
             ],
             "apps/sandbox-ui/src/lib/button/button.component.stories.ts": [
@@ -1023,6 +1520,70 @@
                     "defaultValue": "{\n  args: {\n    btnLabel: 'Dropdown',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n}"
                 }
             ],
+            "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts": [
+                {
+                    "name": "Heading",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    theme: 'bordered',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Select an item',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/select-dropdown works!/gi)).toBeTruthy();\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<SelectDropdownComponent>",
+                    "defaultValue": "{\n  component: SelectDropdownComponent,\n  title: 'SelectDropdownComponent',\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    theme: 'bordered',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Select an item',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n}"
+                }
+            ],
+            "apps/sandbox-ui/src/lib/text-input/text-input.component.stories.ts": [
+                {
+                    "name": "Heading",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/text-input/text-input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    theme: 'secondary',\n    size: 'xs',\n    placeholder: 'Enter a text.',\n    isDisabled: false,\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/text-input works!/gi)).toBeTruthy();\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/text-input/text-input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<TextInputComponent>",
+                    "defaultValue": "{\n  component: TextInputComponent,\n  title: 'TextInputComponent',\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/text-input/text-input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    theme: 'secondary',\n    size: 'xs',\n    placeholder: 'Enter a text.',\n    isDisabled: false,\n  },\n}"
+                }
+            ],
             "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts": [
                 {
                     "name": "Heading",
@@ -1059,6 +1620,19 @@
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
+            "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<AlertComponent>",
+                    "file": "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "apps/sandbox-ui/src/lib/button/button.component.stories.ts": [
                 {
                     "name": "Story",
@@ -1085,6 +1659,32 @@
                     "kind": 183
                 }
             ],
+            "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<SelectDropdownComponent>",
+                    "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "apps/sandbox-ui/src/lib/text-input/text-input.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<TextInputComponent>",
+                    "file": "apps/sandbox-ui/src/lib/text-input/text-input.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts": [
                 {
                     "name": "Story",
@@ -1102,7 +1702,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 15,
+        "count": 13,
         "status": "low",
         "files": [
             {
@@ -1116,12 +1716,51 @@
                 "status": "low"
             },
             {
+                "filePath": "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Heading",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "apps/sandbox-ui/src/lib/alert/alert.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "AlertComponent",
                 "coveragePercent": 60,
                 "coverageCount": "3/5",
+                "status": "good"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/badge/badge.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "BadgeComponent",
+                "coveragePercent": 66,
+                "coverageCount": "8/12",
                 "status": "good"
             },
             {
@@ -1203,12 +1842,81 @@
                 "status": "good"
             },
             {
+                "filePath": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Heading",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "SelectDropdownComponent",
                 "coveragePercent": 56,
                 "coverageCount": "9/16",
+                "status": "good"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/text-input/text-input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Heading",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/text-input/text-input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/text-input/text-input.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "apps/sandbox-ui/src/lib/text-input/text-input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TextInputComponent",
+                "coveragePercent": 60,
+                "coverageCount": "6/10",
                 "status": "good"
             },
             {

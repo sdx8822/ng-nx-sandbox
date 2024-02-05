@@ -72,6 +72,7 @@ export class TextInputComponent {
   public get classes(): string[] {
     let classList = [
       'input',
+      'rounded-full',
       this._sizeMap[this.size],
       this._themeMap[this.theme],
     ];

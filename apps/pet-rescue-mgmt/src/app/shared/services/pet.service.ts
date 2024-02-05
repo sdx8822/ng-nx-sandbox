@@ -8,7 +8,7 @@ import { PetModel, IPetModel } from '../models';
   providedIn: 'root'
 })
 export class PetService {
-  readonly BASE_URL = 'http://localhost:3333/api/';
+  readonly BASE_URL = 'http://localhost:3333/api/pets/';
 
   constructor(private _http: HttpClient) {
   }

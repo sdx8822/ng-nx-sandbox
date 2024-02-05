@@ -1,15 +1,19 @@
-<h1 class="page-title">Pets</h1>
+<main *ngIf="!isLoading">
+    <h1 class="page-title">Pets</h1>
 
-<ng-nx-sandbox-button (click)="setItemToSessionStorage()"></ng-nx-sandbox-button>
+    <ng-nx-sandbox-button (click)="addPet()"></ng-nx-sandbox-button>
 
-<aside class="call-to-actions-container">
-    <ng-nx-sandbox-text-input [placeholder]="'Search'"
-                              [size]="'sm'"
-                              [theme]="'primary'">
-    </ng-nx-sandbox-text-input>
+    <aside class="call-to-actions-container">
+        <ng-nx-sandbox-text-input [placeholder]="'Search'"
+                                  [size]="'sm'"
+                                  [theme]="'primary'">
+        </ng-nx-sandbox-text-input>
 
-    <ng-nx-sandbox-badge [label]="'Filter'"
-                         [size]="'lg'"
-                         [asButton]="true">
-    </ng-nx-sandbox-badge>
-</aside>
+        <ng-nx-sandbox-badge [label]="'Filter'"
+                             [size]="'lg'"
+                             [asButton]="true">
+        </ng-nx-sandbox-badge>
+
+        <span *ngIf="selectedPet">{{selectedPet.name}}</span>
+    </aside>
+</main>

@@ -54,6 +54,12 @@ export class BadgeComponent {
    * Should there be some instructions in an empty input box?
    */
   @Input()
+  iconClass = '';
+
+  /**
+   * Should there be some instructions in an empty input box?
+   */
+  @Input()
   label = 'Badge';
 
   /**
@@ -79,6 +85,7 @@ export class BadgeComponent {
   public get classes(): string[] {
     let classList = [
       'badge',
+      'rounded-full',
       this._sizeMap[this.size],
       this._themeMap[this.theme],
     ];

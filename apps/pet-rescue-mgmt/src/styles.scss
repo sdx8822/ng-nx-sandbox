@@ -2,7 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
 .page-title {
     font-weight: 500;
     font-size: 2em;
 }
+
+// ICONS START
+
+.subtract-circle {
+    vertical-align: middle;
+    content: url('./assets/icons/subtract-circle.svg');
+}
+
+// ICONS END
