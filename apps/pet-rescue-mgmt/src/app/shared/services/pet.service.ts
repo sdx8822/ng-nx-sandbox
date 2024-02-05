@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 
-import { PetModel, IPetModel } from '../models';
+import { PetModel, IPetModel } from '@ng-nx-sandbox/shared-libs';
 
 @Injectable({
   providedIn: 'root'

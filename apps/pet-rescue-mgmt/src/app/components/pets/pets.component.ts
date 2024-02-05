@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { PetService } from '../../shared/services';
 
-import { PetModel } from '../../shared/models';
+import { PetModel } from '@ng-nx-sandbox/shared-libs';
 
 import { 
   BadgeComponent,

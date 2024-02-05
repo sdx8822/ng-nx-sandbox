@@ -8,7 +8,8 @@ export class PetService {
             id: pet.id,
             name: pet.name,
             breed: pet.breed,
-            description: pet.description
+            description: pet.description,
+            status: pet.status
         }));
     }
 
@@ -20,7 +21,8 @@ export class PetService {
                 id: pet.id,
                 name: pet.name,
                 breed: pet.breed,
-                description: pet.description
+                description: pet.description,
+                status: pet.status
             }
         }
 

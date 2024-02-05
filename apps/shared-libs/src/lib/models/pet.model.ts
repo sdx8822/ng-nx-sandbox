@@ -1,5 +1,3 @@
-
-
 export class PetModel implements IPetModel {
     constructor(obj: IPetModel) {
         if(obj) {
