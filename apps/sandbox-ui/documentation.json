@@ -1164,16 +1164,6 @@
                 "name": "Heading",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    theme: 'secondary',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Button',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/button works!/gi)).toBeTruthy();\n  },\n}"
-            },
-            {
-                "name": "Heading",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1184,11 +1174,31 @@
                 "name": "Heading",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    theme: 'secondary',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Button',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/button works!/gi)).toBeTruthy();\n  },\n}"
+            },
+            {
+                "name": "Heading",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "apps/sandbox-ui/src/lib/button-dropdown/button-dropdown.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    btnLabel: 'Dropdown',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/button-dropdown works!/gi)).toBeTruthy();\n  },\n}"
+            },
+            {
+                "name": "Heading",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    theme: 'bordered',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Select an item',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/select-dropdown works!/gi)).toBeTruthy();\n  },\n}"
             },
             {
                 "name": "Heading",
@@ -1211,14 +1221,14 @@
                 "defaultValue": "{\n  args: {\n    labels: [],\n    nullablbe: true,\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/toggle works!/gi)).toBeTruthy();\n  },\n}"
             },
             {
-                "name": "Heading",
+                "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                "file": "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    theme: 'bordered',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Select an item',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/select-dropdown works!/gi)).toBeTruthy();\n  },\n}"
+                "type": "Meta<AlertComponent>",
+                "defaultValue": "{\n  component: AlertComponent,\n  title: 'AlertComponent',\n}"
             },
             {
                 "name": "meta",
@@ -1234,21 +1244,21 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<AlertComponent>",
-                "defaultValue": "{\n  component: AlertComponent,\n  title: 'AlertComponent',\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "apps/sandbox-ui/src/lib/button-dropdown/button-dropdown.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Meta<ButtonDropdownComponent>",
                 "defaultValue": "{\n  component: ButtonDropdownComponent,\n  title: 'ButtonDropdownComponent',\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<SelectDropdownComponent>",
+                "defaultValue": "{\n  component: SelectDropdownComponent,\n  title: 'SelectDropdownComponent',\n}"
             },
             {
                 "name": "meta",
@@ -1271,14 +1281,14 @@
                 "defaultValue": "{\n  component: ToggleComponent,\n  title: 'ToggleComponent',\n}"
             },
             {
-                "name": "meta",
+                "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                "file": "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<SelectDropdownComponent>",
-                "defaultValue": "{\n  component: SelectDropdownComponent,\n  title: 'SelectDropdownComponent',\n}"
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    label: 'This is an alert message!',\n  },\n}"
             },
             {
                 "name": "Primary",
@@ -1294,21 +1304,21 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    label: 'This is an alert message!',\n  },\n}"
-            },
-            {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "apps/sandbox-ui/src/lib/button-dropdown/button-dropdown.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    btnLabel: 'Dropdown',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n}"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  args: {\n    theme: 'bordered',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Select an item',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n}"
             },
             {
                 "name": "Primary",
@@ -1329,31 +1339,10 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    labels: [],\n    nullablbe: true,\n  },\n}"
-            },
-            {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    theme: 'bordered',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Select an item',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n}"
             }
         ],
         "functions": [],
         "typealiases": [
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<ButtonComponent>",
-                "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
             {
                 "name": "Story",
                 "ctype": "miscellaneous",
@@ -1369,8 +1358,30 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<ButtonComponent>",
+                "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<ButtonDropdownComponent>",
                 "file": "apps/sandbox-ui/src/lib/button-dropdown/button-dropdown.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<SelectDropdownComponent>",
+                "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -1397,17 +1408,6 @@
                 "deprecationMessage": "",
                 "description": "",
                 "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<SelectDropdownComponent>",
-                "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
             }
         ],
         "enumerations": [],
@@ -1422,38 +1422,6 @@
                     "deprecationMessage": "",
                     "type": "StorybookConfig",
                     "defaultValue": "{\n  stories: ['../**/*.stories.@(js|jsx|ts|tsx|mdx)'],\n  addons: ['@storybook/addon-essentials', '@storybook/addon-interactions'],\n  framework: {\n    name: '@storybook/angular',\n    options: {},\n  },\n  docs: {\n    autodocs: true,\n    defaultName: 'Documentation'\n  }\n}"
-                }
-            ],
-            "apps/sandbox-ui/src/lib/button/button.component.stories.ts": [
-                {
-                    "name": "Heading",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    theme: 'secondary',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Button',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/button works!/gi)).toBeTruthy();\n  },\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<ButtonComponent>",
-                    "defaultValue": "{\n  component: ButtonComponent,\n  title: 'ButtonComponent',\n}"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    theme: 'secondary',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Button',\n  },\n}"
                 }
             ],
             "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts": [
@@ -1488,6 +1456,38 @@
                     "defaultValue": "{\n  args: {\n    label: 'This is an alert message!',\n  },\n}"
                 }
             ],
+            "apps/sandbox-ui/src/lib/button/button.component.stories.ts": [
+                {
+                    "name": "Heading",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    theme: 'secondary',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Button',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/button works!/gi)).toBeTruthy();\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ButtonComponent>",
+                    "defaultValue": "{\n  component: ButtonComponent,\n  title: 'ButtonComponent',\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    theme: 'secondary',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Button',\n  },\n}"
+                }
+            ],
             "apps/sandbox-ui/src/lib/button-dropdown/button-dropdown.component.stories.ts": [
                 {
                     "name": "Heading",
@@ -1518,6 +1518,38 @@
                     "deprecationMessage": "",
                     "type": "Story",
                     "defaultValue": "{\n  args: {\n    btnLabel: 'Dropdown',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n}"
+                }
+            ],
+            "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts": [
+                {
+                    "name": "Heading",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    theme: 'bordered',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Select an item',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/select-dropdown works!/gi)).toBeTruthy();\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<SelectDropdownComponent>",
+                    "defaultValue": "{\n  component: SelectDropdownComponent,\n  title: 'SelectDropdownComponent',\n}"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  args: {\n    theme: 'bordered',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Select an item',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n}"
                 }
             ],
             "apps/sandbox-ui/src/lib/text-input/text-input.component.stories.ts": [
@@ -1583,56 +1615,11 @@
                     "type": "Story",
                     "defaultValue": "{\n  args: {\n    labels: [],\n    nullablbe: true,\n  },\n}"
                 }
-            ],
-            "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts": [
-                {
-                    "name": "Heading",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    theme: 'bordered',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Select an item',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n    expect(canvas.getByText(/select-dropdown works!/gi)).toBeTruthy();\n  },\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<SelectDropdownComponent>",
-                    "defaultValue": "{\n  component: SelectDropdownComponent,\n  title: 'SelectDropdownComponent',\n}"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    theme: 'bordered',\n    isDisabled: false,\n    size: 'xs',\n    label: 'Select an item',\n    items: [],\n    optionLabel: '',\n    optionValue: '',\n  },\n}"
-                }
             ]
         },
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
-            "apps/sandbox-ui/src/lib/button/button.component.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<ButtonComponent>",
-                    "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "apps/sandbox-ui/src/lib/alert/alert.component.stories.ts": [
                 {
                     "name": "Story",
@@ -1646,6 +1633,19 @@
                     "kind": 183
                 }
             ],
+            "apps/sandbox-ui/src/lib/button/button.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ButtonComponent>",
+                    "file": "apps/sandbox-ui/src/lib/button/button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "apps/sandbox-ui/src/lib/button-dropdown/button-dropdown.component.stories.ts": [
                 {
                     "name": "Story",
@@ -1653,6 +1653,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ButtonDropdownComponent>",
                     "file": "apps/sandbox-ui/src/lib/button-dropdown/button-dropdown.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<SelectDropdownComponent>",
+                    "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1679,19 +1692,6 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<ToggleComponent>",
                     "file": "apps/sandbox-ui/src/lib/toggle/toggle.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
-            "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<SelectDropdownComponent>",
-                    "file": "apps/sandbox-ui/src/lib/select-dropdown/select-dropdown.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
