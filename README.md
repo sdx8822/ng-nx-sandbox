@@ -1,4 +1,4 @@
-### This is a new and ongoing project so there are a lot of missing things and empty UI wise, BUT a lot is happening under the hood to drive the frontend at a later date.
+### This project is not intended to go live. It's just a playground for applying new Angular and Node features
 
 # Running the application using Docker
 
